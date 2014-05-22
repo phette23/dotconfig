@@ -10,15 +10,17 @@ module.exports = function (grunt) {
             main: {
                 files: [
                     // copy all the dot files but not sudoers-linux
+                    // flatten -> put then into ~, not ~/config
                     {
                         expand: true,
+                        flatten: true,
                         src: ['config/.*'],
                         dest: process.env.HOME
                     },
                     {
                         expand: true,
                         src: ['bin/*'],
-                        dest: path.join(process.env.HOME, 'bin')
+                        dest: process.env.HOME
                     }
                 ]
             }
