@@ -1,0 +1,22 @@
+# Run install/update commands without typing my password
+# Copy this to /etc/sudoers.d/
+# Reference: ubuntuforums.org/showthread.php?t=1132821
+# H/t @cowboy github.com/cowboy/dotfiles/
+
+# Host alias
+Host_Alias LAN = 192.168.1.0/255.255.255.0
+
+# Command aliases.
+Cmnd_Alias APT = /usr/bin/apt-get
+Cmnd_Alias GEM = /usr/bin/gem*
+Cmnd_Alias UPDATE = /usr/bin/update-manager
+Cmnd_Alias MYPROGS = APT,GEM,UPDATE
+
+# User privilege specification
+root    ALL=(ALL) ALL
+
+# Members of the sudo group may gain root privileges
+%sudo ALL=(root) ALL
+# Don't allow vim to "shell out"
+%sudo ALL=(root) NOEXEC:/usr/bin/vim
+phette23 ALL=(root) NOPASSWD:MYPROGS

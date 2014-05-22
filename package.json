@@ -1,0 +1,14 @@
+{
+  "name": "dotconfig",
+  "version": "0.0.0",
+  "description": "These are the shell-agnostic pieces of my dotfiles which consist primarily of configuration files for various programs and setup scripts for installing software on new machines.",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "matchdep": "^0.3.0"
+  },
+  "author": "phette23 <phette23@gmail.com> (http://phette.net/)",
+  "license": "MIT"
+}

@@ -1,0 +1,6 @@
+# Diff image files
+# See http://git-scm.com/book/en/Customizing-Git-Git-Attributes
+*.png diff=exif
+*.jpg diff=exif
+*.jpeg diff=exif
+*.gif diff=exif
