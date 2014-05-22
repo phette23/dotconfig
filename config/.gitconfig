@@ -94,5 +94,9 @@
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
 
+[user]
+	name = phette23
+	email = phette23@gmail.com
+
 [push]
 	default = matching
