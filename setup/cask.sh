@@ -32,6 +32,7 @@ brew cask install \
   prey \
   quicksilver \
   scribus \
+  spotify \
   sublime-text-3 \
   tor-browser \
   zotero
