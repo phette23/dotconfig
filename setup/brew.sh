@@ -40,12 +40,14 @@ brew install ack \
 	php55 \
 	pngcrush \
 	python3 \
-	rbenv \
 	ruby-build \
 	"source-highlight" \
 	tree \
 	webkit2png \
 	z
+
+# unreleased rbenv version supports Fish shell
+brew install rbenv --HEAD
 
 # Install wget with IRI support
 brew install wget --enable-iri
