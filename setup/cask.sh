@@ -34,11 +34,8 @@ brew cask install \
   quicksilver \
   scribus \
   spotify \
-  sublime-text-3 \
-  tor-browser \
+  sublime-text3 \
+  torbrowser \
   zotero
-
-# link Sublime Text CLI
-ln -s "~/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" "/usr/local/bin/"
 
 echo 'Remember to install Prey with an API key, using "API_KEY=blah brew cask install prey"'
