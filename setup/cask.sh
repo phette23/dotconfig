@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 if [ ! $(command -v brew) ]; then
   echo "You need to install homebrew first, dummy."
-  exit 1;
+  open "http://brew.sh"
+  exit 1
 fi
 
 brew tap phinze/homebrew-cask
