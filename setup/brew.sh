@@ -19,6 +19,7 @@ brew tap josegonzalez/homebrew-php
 
 # Install other useful packages
 brew install ack \
+	archey \
 	bash \
 	bash-completion \
 	chromedriver \
