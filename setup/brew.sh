@@ -38,6 +38,7 @@ brew install ack \
 	lynx \
 	ngrep \
 	node \
+	nvm \
 	optipng \
 	phantomjs \
 	php55 \
