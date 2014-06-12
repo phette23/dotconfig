@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 if [ ! $(command -v brew) ]; then
-  echo "You need to install homebrew first, dummy."
-  exit 1;
+  echo 'You need to install homebrew first,silly!'
+  open "http://brew.sh"
+  exit 1
 fi
 
 # Make sure we’re using the latest Homebrew
@@ -18,6 +19,7 @@ brew tap josegonzalez/homebrew-php
 
 # Install other useful packages
 brew install ack \
+	archey \
 	bash \
 	bash-completion \
 	chromedriver \
@@ -26,6 +28,7 @@ brew install ack \
 	drush \
 	exiftool \
 	findutils \
+	fish \
 	ghostscript --with-x11 \
 	git \
 	gnupg \
@@ -35,6 +38,7 @@ brew install ack \
 	lynx \
 	ngrep \
 	node \
+	nvm \
 	optipng \
 	phantomjs \
 	php55 \

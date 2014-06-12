@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 if [ ! $(command -v brew) ]; then
-  echo "You need to install homebrew first, dummy."
-  exit 1;
+  echo 'You need to install homebrew first, silly!'
+  open "http://brew.sh"
+  exit 1
 fi
 
 brew tap phinze/homebrew-cask
@@ -33,11 +34,8 @@ brew cask install \
   quicksilver \
   scribus \
   spotify \
-  sublime-text-3 \
-  tor-browser \
+  sublime-text3 \
+  torbrowser \
   zotero
-
-# link Sublime Text CLI
-ln -s "~/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" "/usr/local/bin/"
 
 echo 'Remember to install Prey with an API key, using "API_KEY=blah brew cask install prey"'
