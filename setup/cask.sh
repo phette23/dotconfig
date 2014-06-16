@@ -29,7 +29,6 @@ brew cask install \
   lastfm \
   menumeters \
   openrefine \
-  pandoc \
   prey \
   quicksilver \
   scribus \

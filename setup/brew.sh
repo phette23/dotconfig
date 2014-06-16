@@ -40,6 +40,7 @@ brew install ack \
 	node \
 	nvm \
 	optipng \
+	pandoc \
 	phantomjs \
 	php55 \
 	pngcrush \
