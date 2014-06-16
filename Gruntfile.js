@@ -19,7 +19,7 @@ module.exports = function (grunt) {
                     },
                     {
                         expand: true,
-                        src: ['bin/*'],
+                        src: ['bin/*', '.vim/*'],
                         dest: process.env.HOME
                     }
                 ]
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
         },
         watch: {
             main: {
-                files: [ 'config/.*', 'bin/*' ],
+                files: [ 'config/.*', 'bin/*', '.vim/*' ],
                 tasks: [ 'copy' ]
             }
         }
