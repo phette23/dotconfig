@@ -17,11 +17,9 @@ brew cask install \
   dropbox \
   firefox \
   gimp \
-  github \
   google-chrome \
   google-chrome-canary \
   google-drive \
-  music-manager \
   imageoptim \
   inkscape \
   istumbler \

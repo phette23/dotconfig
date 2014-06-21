@@ -34,9 +34,6 @@ brew install ack \
 	gnupg \
 	homebrew/dupes/grep \
 	imagemagick \
-	jshon \
-	lynx \
-	ngrep \
 	node \
 	nvm \
 	optipng \
@@ -49,6 +46,7 @@ brew install ack \
 	"source-highlight" \
 	tree \
 	webkit2png \
+	xquartz \
 	z
 
 # unreleased rbenv version supports Fish shell
