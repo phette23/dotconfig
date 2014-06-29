@@ -6,6 +6,7 @@
 --ignore-dir=.sass-cache
 --ignore-dir=.tmp
 --ignore-dir=node_modules
+--ignore-file=ext:sublime-workspace
 --smart-case
 --sort-files
 --follow
