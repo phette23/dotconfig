@@ -5,6 +5,7 @@
 --type-set=c=.c,.cpp,.ino,.pde,.h
 --ignore-dir=.sass-cache
 --ignore-dir=.tmp
+--ignore-dir=node_modules
 --smart-case
 --sort-files
 --follow
