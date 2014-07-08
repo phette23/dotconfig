@@ -11,8 +11,6 @@ brew update
 # Upgrade any already-installed formulae
 brew upgrade
 
-echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
-
 # tap necessary formulas
 brew tap homebrew/dupes
 brew tap josegonzalez/homebrew-php
