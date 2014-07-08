@@ -89,8 +89,3 @@ endif
 " My tweaks
 " Quicker way of exiting insert mode
 inoremap jj <ESC>
-" This is needed to make pasting work in Fish shell
-set noshelltemp
-" Shortcut for pbpaste
-noremap \ :r !pbpaste<CR>
-" End my tweaks
