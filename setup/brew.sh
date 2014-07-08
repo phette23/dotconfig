@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if [ ! $(command -v brew) ]; then
-  echo 'You need to install homebrew first,silly!'
+  echo 'You need to install homebrew first, silly!'
   open "http://brew.sh"
   exit 1
 fi
@@ -45,6 +45,7 @@ brew install ack \
 	ruby-build \
 	"source-highlight" \
 	tree \
+	vim \
 	webkit2png \
 	xquartz \
 	z
