@@ -84,6 +84,8 @@ if has("autocmd")
 	filetype on
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+    " Edit crontab files (needed for OS X)
+    autocmd FileType crontab setlocal nowritebackup
 endif
 
 " My tweaks
