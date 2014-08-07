@@ -14,6 +14,7 @@ brew upgrade
 # tap necessary formulas
 brew tap homebrew/dupes
 brew tap homebrew/homebrew-versions
+brew tap homebrew/completions
 brew tap josegonzalez/homebrew-php
 
 # Install other useful packages
@@ -21,6 +22,7 @@ brew install ack \
 	archey \
 	bash \
 	bash-completion \
+	homebrew/completions/bundler-completion \
 	chromedriver \
 	cloc \
 	coreutils \
@@ -39,9 +41,11 @@ brew install ack \
 	pandoc \
 	phantomjs \
 	php55 \
+	homebrew/completions/pip-completion \
 	pngcrush \
 	python3 \
 	ruby-build \
+	homebrew/completions/ruby-completion \
 	"source-highlight" \
 	tree \
 	vim \
