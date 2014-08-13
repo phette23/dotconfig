@@ -61,3 +61,8 @@ brew install wget --enable-iri
 
 # Remove outdated versions from the cellar
 brew cleanup
+
+# We got Bash & Fish? Add them to /etc/shells & use updated Bash
+echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
+echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/bash
