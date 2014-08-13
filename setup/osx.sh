@@ -12,19 +12,19 @@ xcode-select --install
 
 # Some tools look for XCode, even though they don't need it.
 if [[ ! -d "$('xcode-select' -print-path 2>/dev/null)" ]]; then
-  sudo xcode-select -switch /
+    sudo xcode-select -switch /
 fi
 
 # Install Homebrew.
 if [[ ! "$(type -P brew)" ]]; then
-  echo "Installing Homebrew"
-  true | ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    echo "Installing Homebrew"
+    true | ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 fi
 
 if [[ "$(type -P brew)" ]]; then
-  echo "Updating Homebrew"
-  brew doctor
-  brew update
+    echo "Updating Homebrew"
+    brew doctor
+    brew update
 fi
 
 # Ask for the administrator password upfront
@@ -465,18 +465,19 @@ unset a2l
 ###############################################################################
 
 for app in "Address Book" \
-  "Calendar" \
-  "Contacts" \
-  "Dock" \
-  "Finder" \
-	"Mail" \
-  "Safari" \
-  "SystemUIServer" \
-  "Terminal" \
-  "iCal" \
-  "iTunes" \
-  "blued"; do
+    "Calendar" \
+    "Contacts" \
+    "Dock" \
+    "Finder" \
+    "Mail" \
+    "Safari" \
+    "SystemUIServer" \
+    "Terminal" \
+    "iCal" \
+    "iTunes" \
+    "blued"; do
 	killall "$app" > /dev/null 2>&1
 done
+
 echo "Done! Some changes require a logout/restart to take effect."
 echo "Also, don't forget to add '%admin ALL=(ALL) NOPASSWD: /usr/sbin/softwareupdate' to /etc/sudoers so you don't have to type your password when running the update alias."
