@@ -427,6 +427,15 @@ defaults write com.apple.Terminal "Startup Window Settings" -string "Homebrew"
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
+# Sublime Text                                                                #
+###############################################################################
+
+# Clone ST settings from GitHub
+mkdir -p ~/Library/Application Support/Sublime Text 3/Packages/User/
+# Note: repo will be read only until an SSH key is set up on new machine
+git clone https://github.com/phette23/sublime-text-3-settings.git
+
+###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
 ###############################################################################
 
