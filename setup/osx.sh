@@ -455,7 +455,7 @@ a2l () {
 a2l -t "Alfred 2"
 a2l -f "Google Chrome"
 a2l -f "iTerm"
-a2l -t "Quicksilver"
+
 # Google Drive & Dropbox will prompt you to open on startup the first time
 # you open them, but they're good candidates here, too
 unset a2l
