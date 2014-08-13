@@ -66,3 +66,6 @@ brew cleanup
 echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
 echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/bash
+
+# Get a current ruby
+rbenv install 2.1.2
