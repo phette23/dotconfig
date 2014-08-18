@@ -25,3 +25,11 @@ sudo apt-get -y install \
     vim \
     xinetd \
     yaz
+
+# Node in Apt is outdated
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get install -y nodejs \
+    npm
+
+# Binary is at nodejs initially, fix that
+ln -s /usr/bin/nodejs /usr/bin/node
