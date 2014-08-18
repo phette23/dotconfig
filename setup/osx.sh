@@ -97,6 +97,11 @@ defaults write com.apple.systemuiserver menuExtras -array \
     "/System/Library/CoreServices/Menu Extras/Clock.menu" \
     "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
 
+# Date/time in menu bar like: Sun Aug 17 22:53
+defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  HH:mm"
+defaults write com.apple.menuextra.clock FlashDateSeparators -bool false
+defaults write com.apple.menuextra.clock IsAnalog -bool false
+
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
