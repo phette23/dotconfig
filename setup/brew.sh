@@ -15,7 +15,6 @@ brew upgrade
 brew tap homebrew/dupes
 brew tap homebrew/homebrew-versions
 brew tap homebrew/completions
-brew tap josegonzalez/homebrew-php
 
 # Install other useful packages
 brew install ack \
