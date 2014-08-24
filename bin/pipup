@@ -8,5 +8,5 @@ from subprocess import call
 
 # from stackoverflow.com/questions/2720014/upgrading-all-packages-with-pip
 for dist in pip.get_installed_distributions():
-    if not re.match('pyobjc', dist.project_name):
+    if not re.match('pyobjc', dist.project_name) and not re.match('bonjour-py', dist.project_name):
         call('sudo pip install --upgrade ' + dist.project_name, shell=True)
