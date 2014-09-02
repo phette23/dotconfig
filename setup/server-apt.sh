@@ -4,11 +4,10 @@
 sudo apt-get update
 
 sudo apt-get -y install \
-    cowsay \
+    autossh \
     curl \
-    denyhosts \
+    fail2ban
     git \
-    lynx \
     mongodb \
     ngrep \
     openssh-server \
@@ -17,6 +16,7 @@ sudo apt-get -y install \
     php5-cli \
     php-pear \
     pngcrush \
+    python-pip \
     python-setuptools \
     rbenv \
     ruby1.9.1 \
