@@ -13,8 +13,12 @@ module.exports = function (grunt) {
                     // flatten -> put then into ~, not ~/config
                     {
                         expand: true,
-                        flatten: true,
-                        src: ['config/.*'],
+                        cwd: 'config/',
+                        src: [
+                            '.*'
+                            , '.**/**'
+                            , '!sudoers-linux'
+                        ],
                         dest: process.env.HOME
                     },
                     {
