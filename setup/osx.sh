@@ -105,6 +105,9 @@ defaults write com.apple.menuextra.clock IsAnalog -bool false
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
+# Disable "LCD font smoothing" which makes light font on dark bg look bad
+defaults write -g AppleFontSmoothing -int 1
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
