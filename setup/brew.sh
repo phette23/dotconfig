@@ -33,6 +33,7 @@ brew install ack \
 	git \
 	gnupg \
 	homebrew/dupes/grep \
+	hub \
 	imagemagick \
 	node \
 	nvm \
