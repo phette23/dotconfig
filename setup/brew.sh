@@ -36,7 +36,6 @@ brew install ack \
 	hub \
 	imagemagick \
 	node \
-	nvm \
 	optipng \
 	pandoc \
 	phantomjs \
