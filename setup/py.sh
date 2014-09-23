@@ -8,4 +8,6 @@ sudo pip install \
   flake8 \
   pymarc \
   requests \
-  selenium
+  selenium \
+  virtualenv
+
