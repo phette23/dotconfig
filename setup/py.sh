@@ -5,6 +5,7 @@ sudo easy_install pip
 
 sudo pip install \
   beautifulsoup4 \
+  csvkit \
   flake8 \
   pymarc \
   requests \
