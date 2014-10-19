@@ -40,6 +40,9 @@ sudor mkdir /etc/cron
 # General UI/UX                                                               #
 ###############################################################################
 
+# use dark mode (introduced in 10.10 Yosemite)
+sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
+
 # Set highlight color to green
 defaults write NSGlobalDomain AppleHighlightColor -string '0.764700 0.976500 0.568600'
 
