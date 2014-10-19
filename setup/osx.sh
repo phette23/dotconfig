@@ -18,7 +18,7 @@ fi
 # Install Homebrew.
 if [[ ! "$(type -P brew)" ]]; then
     echo "Installing Homebrew"
-    true | ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    true | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 if [[ "$(type -P brew)" ]]; then
