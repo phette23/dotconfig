@@ -3,9 +3,5 @@
 gem install \
 	bundler \
 	compass \
-	jekyll \
-	jekyll-sitemap \
 	sass \
-	scss-lint \
-	showterm \
-	sinatra
+	scss-lint
