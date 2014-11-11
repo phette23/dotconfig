@@ -32,6 +32,7 @@ brew install ack \
 	ghostscript --with-x11 \
 	git \
 	gnupg \
+    gnu-sed \
 	homebrew/dupes/grep \
 	hub \
 	imagemagick \
@@ -42,6 +43,7 @@ brew install ack \
 	php55 \
 	homebrew/completions/pip-completion \
 	pngcrush \
+    python \
 	python3 \
 	ruby-build \
 	homebrew/completions/ruby-completion \
