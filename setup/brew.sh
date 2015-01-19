@@ -34,7 +34,6 @@ brew install ack \
 	gnupg \
     gnu-sed \
 	homebrew/dupes/grep \
-	hub \
 	imagemagick \
 	node \
 	optipng \

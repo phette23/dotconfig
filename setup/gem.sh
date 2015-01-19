@@ -3,5 +3,6 @@
 gem install \
 	bundler \
 	compass \
+    hub \
 	sass \
 	scss-lint
