@@ -35,7 +35,6 @@ brew install ack \
     gnu-sed \
 	homebrew/dupes/grep \
 	imagemagick \
-	node \
 	optipng \
 	pandoc \
 	phantomjs \
