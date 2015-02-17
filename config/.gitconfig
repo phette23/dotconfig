@@ -7,6 +7,7 @@
 	ca = commit -am
 	# Clone a repository including all submodules
 	cl = clone --recursive
+	co = checkout
 	# Show the diff between the latest commit and the current state
 	d = diff
 	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
