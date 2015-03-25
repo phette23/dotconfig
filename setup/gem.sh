@@ -3,6 +3,7 @@
 gem install \
 	bundler \
 	compass \
-    hub \
+	hub \
+	lolcat \
 	sass \
 	scss-lint
