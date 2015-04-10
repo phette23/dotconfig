@@ -32,9 +32,10 @@ brew install ack \
 	ghostscript --with-x11 \
 	git \
 	gnupg \
-    gnu-sed \
+	gnu-sed \
 	homebrew/dupes/grep \
 	imagemagick \
+	jq \
 	optipng \
 	pandoc \
 	phantomjs \
