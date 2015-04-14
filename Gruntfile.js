@@ -13,7 +13,7 @@ module.exports = function (grunt) {
                     // flatten -> put then into ~, not ~/config
                     {
                         expand: true,
-                        cwd: 'config/',
+                        cwd: 'config',
                         src: [
                             '.*'
                             , '.**/**'
@@ -25,6 +25,12 @@ module.exports = function (grunt) {
                         expand: true,
                         src: ['bin/*', '.vim/*'],
                         dest: process.env.HOME
+                    },
+                    {
+                        expand: true,
+                        cwd: 'config/emmet',
+                        src: ['*.json'],
+                        dest: path.join(process.env.HOME, '.config', 'emmet')
                     }
                 ]
             }
