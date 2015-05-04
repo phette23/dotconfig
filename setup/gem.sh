@@ -6,4 +6,4 @@ gem install \
 	hub \
 	lolcat \
 	sass \
-	scss-lint
+	scss_lint
