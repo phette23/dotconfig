@@ -101,3 +101,5 @@
 
 [push]
 	default = matching
+	# push annotated tags, too
+	followTags = true
