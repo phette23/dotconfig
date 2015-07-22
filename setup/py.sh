@@ -11,4 +11,3 @@ sudo pip install \
   requests \
   selenium \
   virtualenv
-

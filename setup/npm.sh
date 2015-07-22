@@ -5,20 +5,16 @@ npm config set prefix ~/npm
 # install global NPM packages
 npm install -g --quiet \
   bower \
-  express \
-  generator-angular \
-  generator-bookmarklet \
+  cssmin \
+  express-generator \
   generator-h5bp \
-  generator-jekyllrb \
+  generator-node \
   generator-reveal \
   grunt-cli \
   gulp \
   jshint \
   nodemon \
   phantomas \
-  plato \
-  requirejs \
-  slush \
-  slush-h5bp \
+  trash \
   uglify-js \
   yo
