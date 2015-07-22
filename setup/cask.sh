@@ -31,4 +31,8 @@ brew cask install \
   torbrowser \
   zotero
 
+# useful Quick Look plugins for developers
+# https://github.com/sindresorhus/quick-look-plugins
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+
 echo 'Remember to install Prey with an API key, using "API_KEY=blah brew cask install prey"'
