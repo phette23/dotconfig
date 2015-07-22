@@ -18,20 +18,16 @@ brew cask install \
   firefox \
   gimp \
   google-chrome \
-  google-chrome-canary \
   google-drive \
   imageoptim \
   inkscape \
   istumbler \
   iterm2 \
-  lastfm \
   menumeters \
   openrefine \
   prey \
-  quicksilver \
   scribus \
   spotify \
-  sublime-text3 \
   torbrowser \
   zotero
 
