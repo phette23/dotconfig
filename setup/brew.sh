@@ -36,6 +36,7 @@ brew install ack \
 	homebrew/dupes/grep \
 	imagemagick \
 	jq \
+    moreutils \
 	optipng \
 	pandoc \
 	phantomjs \
@@ -68,4 +69,4 @@ echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/bash
 
 # Get a current ruby
-rbenv install 2.1.2
+rbenv install 2.2.1
