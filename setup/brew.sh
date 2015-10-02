@@ -25,6 +25,7 @@ brew install ack \
 	chromedriver \
 	cloc \
 	coreutils \
+	dict \
 	drush \
 	exiftool \
 	findutils \
@@ -36,14 +37,15 @@ brew install ack \
 	homebrew/dupes/grep \
 	imagemagick \
 	jq \
-    moreutils \
+	moreutils \
+	nvm \
 	optipng \
 	pandoc \
 	phantomjs \
 	php55 \
 	homebrew/completions/pip-completion \
 	pngcrush \
-    python \
+	python \
 	python3 \
 	ruby-build \
 	homebrew/completions/ruby-completion \
@@ -70,3 +72,5 @@ chsh -s /usr/local/bin/bash
 
 # Get a current ruby
 rbenv install 2.2.1
+# and a current node
+nvm install stable
