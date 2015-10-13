@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # install global NPM packages
 npm install -g --quiet \
+  babel \
   bower \
   generator-h5bp \
   generator-node \
