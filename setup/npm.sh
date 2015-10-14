@@ -11,6 +11,6 @@ npm install -g --quiet \
   jshint \
   nodemon \
   phantomas \
-  trash \
+  trash-cli \
   uglify-js \
   yo
