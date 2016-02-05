@@ -11,22 +11,15 @@ brew install brew-cask
 
 brew cask install \
   alfred \
-  calibre \
-  clamxav \
-  daisydisk \
   dropbox \
   firefox \
   gimp \
   google-chrome \
   google-drive \
   imageoptim \
-  inkscape \
   istumbler \
   iterm2 \
-  menumeters \
-  openrefine \
   prey \
-  scribus \
   spotify \
   torbrowser \
   zotero
