@@ -6,10 +6,8 @@ sudo apt-get update
 sudo apt-get -y install \
 	apache2 \
 	adobe-flashplugin \
-	audacity \
 	chromium-browser \
 	clang \
-	epiphany-browser \
 	fonts-droid \
 	fonts-inconsolata \
 	fonts-linuxlibertine \
@@ -18,12 +16,7 @@ sudo apt-get -y install \
 	gimp \
 	gnome-do \
 	gnome-dictionary \
-	inkscape \
-	midori \
 	phantomjs \
-	scribus \
-	synaptic \
-	terminator \
 	texlive-fonts-recommended \
 	tor \
 	vidalia \
