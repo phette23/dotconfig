@@ -6,6 +6,7 @@ npm install -g --quiet \
   generator-node \
   generator-reveal \
   grunt-cli \
+  http-server \
   jshint \
   nodemon \
   trash-cli \
