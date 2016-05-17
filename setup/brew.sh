@@ -20,12 +20,9 @@ brew tap homebrew/completions
 brew install ack \
 	archey \
 	bash \
-	bash-completion \
-	homebrew/completions/bundler-completion \
 	chromedriver \
 	cloc \
 	coreutils \
-	dict \
 	drush \
 	exiftool \
 	findutils \
@@ -39,21 +36,17 @@ brew install ack \
 	jq \
 	moreutils \
 	nvm \
-	optipng \
 	pandoc \
+    perl-build \
 	phantomjs \
 	php55 \
-	homebrew/completions/pip-completion \
-	pngcrush \
+    plenv \
 	python \
 	python3 \
 	ruby-build \
-	homebrew/completions/ruby-completion \
 	"source-highlight" \
 	tree \
 	vim \
-	webkit2png \
-	xquartz \
 	z
 
 # unreleased rbenv version supports Fish shell
@@ -71,6 +64,7 @@ echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/bash
 
 # Get a current ruby
-rbenv install 2.2.1
+rbenv install 2.3.1
 # and a current node
 nvm install stable
+# add a current perl here, too?
