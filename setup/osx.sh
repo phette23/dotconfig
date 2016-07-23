@@ -176,7 +176,7 @@ defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `systemsetup -listtimezones` for other values
-systemsetup -settimezone "America/New_York" > /dev/null
+systemsetup -settimezone "America/Los_Angeles" > /dev/null
 
 ###############################################################################
 # Screen                                                                      #
