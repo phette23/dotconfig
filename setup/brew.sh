@@ -20,7 +20,6 @@ brew tap homebrew/completions
 brew install ack \
 	archey \
 	bash \
-	chromedriver \
 	cloc \
 	coreutils \
 	drush \
@@ -29,14 +28,12 @@ brew install ack \
 	fish \
 	ghostscript --with-x11 \
 	git \
-	gnupg \
 	gnu-sed \
 	homebrew/dupes/grep \
 	imagemagick \
 	jq \
 	moreutils \
 	nvm \
-	pandoc \
     perl-build \
 	phantomjs \
 	php55 \

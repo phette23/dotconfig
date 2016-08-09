@@ -20,7 +20,6 @@ sudo apt-get -y install \
 	texlive-fonts-recommended \
 	tor \
 	vidalia \
-	wine \
 	xclip
 
 # Done! Dropbox is the only major item not in apt-get

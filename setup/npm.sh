@@ -8,7 +8,6 @@ npm install -g --quiet \
   grunt-cli \
   http-server \
   jshint \
-  nodemon \
   trash-cli \
   uglify-js \
   yo

@@ -13,7 +13,6 @@ brew cask install \
   alfred \
   dropbox \
   firefox \
-  gimp \
   google-chrome \
   google-drive \
   imageoptim \
