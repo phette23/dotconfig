@@ -14,7 +14,7 @@ npm install -g --quiet \
 
 # if any of my personal utilities exist, link them
 projects="~/code/dogedc ~/code/equella-cli"
-for project in $projects; do
+for project in ${projects}; do
     # if dir exists, move into it & link
-    [ -d $project ] && cd $project && npm link
+    [ -d ${project} ] && cd ${project} && npm link
 done
