@@ -12,10 +12,4 @@ This project breaks off of [my previous dotfiles](https://github.com/phette23/my
 
 **setup** is for one-time setup scripts for new computers, mostly lists of packages to install from various package managers. These files are not synced anywhere.
 
-## Grunt Tasks
-
-If you have Node & Grunt installed, you can run `npm i` inside this project to get started.
-
-**`grunt copy`** (also the default `grunt`) moves the files into place.
-
-**`grunt watch`** monitors config/ & bin/ for changes & then runs `copy`.
+The included "copy.sh" script copies all the configuration files (not the setup scripts) into your home directory.
