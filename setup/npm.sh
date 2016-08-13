@@ -11,3 +11,10 @@ npm install -g --quiet \
   trash-cli \
   uglify-js \
   yo
+
+# if any of my personal utilities exist, link them
+projects="~/code/dogedc ~/code/equella-cli"
+for project in $projects; do
+    # if dir exists, move into it & link
+    [ -d $project ] && cd $project && npm link
+done
