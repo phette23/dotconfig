@@ -6,22 +6,24 @@ if [ ! $(command -v brew) ]; then
 fi
 
 brew tap phinze/homebrew-cask
-brew tap caskroom/homebrew-versions
-brew install brew-cask
+brew cask
 
 brew cask install \
   alfred \
   dropbox \
-  firefox \
   google-chrome \
   google-drive \
   imageoptim \
   istumbler \
   iterm2 \
-  prey \
+  slack \
   spotify \
   torbrowser \
+  xquartz \
   zotero
+
+# now we can `brew install ghostscript` with X11, xquartz was a requirement
+brew install ghostscript --with-x11
 
 # useful Quick Look plugins for developers
 # https://github.com/sindresorhus/quick-look-plugins
