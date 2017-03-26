@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+rbenv install 2.4.1
+
 gem install \
 	bundler \
 	compass \
