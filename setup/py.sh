@@ -3,7 +3,7 @@
 
 sudo easy_install pip
 
-sudo pip install \
+sudo -H pip install \
   csvkit \
   flake8 \
   pymarc \
