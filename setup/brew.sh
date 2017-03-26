@@ -13,8 +13,6 @@ brew upgrade
 
 # tap necessary formulas
 brew tap homebrew/dupes
-brew tap homebrew/homebrew-versions
-brew tap homebrew/completions
 
 # Install other useful packages
 brew install ack \
@@ -24,7 +22,6 @@ brew install ack \
 	exiftool \
 	findutils \
 	fish \
-	ghostscript --with-x11 \
 	git \
 	gnu-sed \
 	homebrew/dupes/grep \
@@ -41,10 +38,8 @@ brew install ack \
 	"source-highlight" \
 	tree \
 	vim \
+    wget \
 	z
-
-# Install wget with IRI support
-brew install wget --enable-iri
 
 # Remove outdated versions from the cellar
 brew cleanup
