@@ -20,9 +20,7 @@ brew tap homebrew/completions
 brew install ack \
 	archey \
 	bash \
-	cloc \
 	coreutils \
-	drush \
 	exiftool \
 	findutils \
 	fish \
@@ -30,24 +28,20 @@ brew install ack \
 	git \
 	gnu-sed \
 	homebrew/dupes/grep \
-	imagemagick \
 	jq \
 	moreutils \
 	nvm \
     perl-build \
 	phantomjs \
-	php55 \
     plenv \
 	python \
 	python3 \
+    rbenv \
 	ruby-build \
 	"source-highlight" \
 	tree \
 	vim \
 	z
-
-# unreleased rbenv version supports Fish shell
-brew install rbenv --HEAD
 
 # Install wget with IRI support
 brew install wget --enable-iri
@@ -61,7 +55,7 @@ echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/bash
 
 # Get a current ruby
-rbenv install 2.3.1
+rbenv install 2.4.1
 # and a current node
 nvm install stable
 # add a current perl here, too?
