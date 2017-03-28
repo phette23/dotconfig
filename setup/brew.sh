@@ -22,6 +22,7 @@ brew install ack \
 	exiftool \
 	findutils \
 	fish \
+	fisherman \
 	git \
 	gnu-sed \
 	homebrew/dupes/grep \
