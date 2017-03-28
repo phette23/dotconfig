@@ -28,17 +28,17 @@ brew install ack \
 	jq \
 	moreutils \
 	nvm \
-    perl-build \
+	perl-build \
 	phantomjs \
-    plenv \
+	plenv \
 	python \
 	python3 \
-    rbenv \
+	rbenv \
 	ruby-build \
 	"source-highlight" \
 	tree \
 	vim \
-    wget \
+	wget \
 	z
 
 # Remove outdated versions from the cellar
