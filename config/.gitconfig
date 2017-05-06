@@ -1,6 +1,6 @@
 [alias]
 	a = add
-	br = branch -a
+	br = branch -v
 	# Simpler commit, add
 	c = commit -m
 	# Commit all changes
