@@ -2,14 +2,9 @@
 # install global NPM packages
 npm install -g --quiet \
   babel-cli \
-  generator-h5bp \
-  generator-node \
   grunt-cli \
-  http-server \
-  jshint \
   trash-cli \
-  uglify-js \
-  yo
+  uglify-js
 
 # if any of my personal utilities exist, link them
 projects="~/code/dogedc ~/code/equella-cli"
