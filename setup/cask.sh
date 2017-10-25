@@ -6,7 +6,6 @@ if [ ! $(command -v brew) ]; then
 fi
 
 brew tap phinze/homebrew-cask
-brew cask
 
 brew cask install \
   alfred \
@@ -14,13 +13,11 @@ brew cask install \
   google-chrome \
   google-drive \
   imageoptim \
-  istumbler \
   iterm2 \
   slack \
   spotify \
   torbrowser \
-  xquartz \
-  zotero
+  xquartz
 
 # now we can `brew install ghostscript` with X11, xquartz was a requirement
 brew install ghostscript --with-x11
