@@ -8,11 +8,11 @@ fi
 # Make sure we’re using the latest Homebrew
 brew update
 
+# for fisherman
+brew tap fisherman/homebrew-tap
+
 # Upgrade any already-installed formulae
 brew upgrade
-
-# tap necessary formulas
-brew tap homebrew/dupes
 
 # Install other useful packages
 brew install ack \
@@ -25,7 +25,7 @@ brew install ack \
 	fisherman \
 	git \
 	gnu-sed \
-	homebrew/dupes/grep \
+	grep \
 	jq \
 	moreutils \
 	nvm \
