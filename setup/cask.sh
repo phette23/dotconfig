@@ -11,7 +11,6 @@ brew cask install \
   alfred \
   dropbox \
   google-chrome \
-  google-drive \
   imageoptim \
   iterm2 \
   slack \
