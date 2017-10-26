@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
 
 # based on http://mths.be/osx
 # also adopts portions of cowboy/dotfiles/init/10_osx.sh

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
 if [ ! $(command -v brew) ]; then
   echo 'You need to install homebrew first, silly!'
   open "http://brew.sh"

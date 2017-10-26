@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
 # Software for a fresh Ubuntu Server install
 
 sudo apt-get update
@@ -11,8 +11,6 @@ sudo apt-get -y install \
     mongodb \
     ngrep \
     openssh-server \
-    php5-cli \
-    php-pear \
     python-pip \
     python-setuptools \
     rbenv \

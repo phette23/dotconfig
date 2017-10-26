@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#! /usr/bin/env bash -x
 
 rbenv install 2.4.1
 

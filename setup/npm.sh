@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
 # install global NPM packages
 npm install -g --quiet \
   babel-cli \

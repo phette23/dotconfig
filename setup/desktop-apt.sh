@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
 # Software for a fresh Ubuntu Desktop install
 
 sudo apt-get update
