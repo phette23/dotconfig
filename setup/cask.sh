@@ -9,7 +9,9 @@ brew tap phinze/homebrew-cask
 
 brew cask install \
   alfred \
+  atom \
   dropbox \
+  evernote \
   google-chrome \
   imageoptim \
   iterm2 \
