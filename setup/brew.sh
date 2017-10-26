@@ -8,9 +8,6 @@ fi
 # Make sure we’re using the latest Homebrew
 brew update
 
-# for fisherman
-brew tap fisherman/homebrew-tap
-
 # Upgrade any already-installed formulae
 brew upgrade
 
@@ -22,7 +19,6 @@ brew install ack \
 	exiftool \
 	findutils \
 	fish \
-	fisherman \
 	git \
 	gnu-sed \
 	grep \
