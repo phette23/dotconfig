@@ -3,6 +3,7 @@
 npm install -g --quiet \
   babel-cli \
   grunt-cli \
+  n \
   trash-cli \
   uglify-js
 

@@ -23,7 +23,6 @@ brew install ack \
 	grep \
 	jq \
 	moreutils \
-	nvm \
 	perl-build \
 	phantomjs \
 	plenv \
