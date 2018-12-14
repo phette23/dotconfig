@@ -19,6 +19,8 @@
 	p = push
 	# Push tags
 	pt = push origin --tags
+	# erase knowledge of branches that no longer exist on the remote
+	pr = remote prune origin
 	# Pull in remote changes for the current repository and all its submodules
 	pul = !"git pull --rebase; git submodule foreach git pull origin master"
 	# Interactive rebase with the given number of latest commits
