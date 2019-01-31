@@ -1,9 +1,9 @@
 #!/usr/bin/env bash -x
 # install global NPM packages
 npm install -g --quiet \
-  babel-cli \
-  grunt-cli \
-  gulp-cli \
+  @babel/core \
+  @babel/cli \
+  @babel/present-env \
   n \
   trash-cli \
   uglify-js
