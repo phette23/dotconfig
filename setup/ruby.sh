@@ -7,5 +7,4 @@ gem install \
 	compass \
 	hub \
 	lolcat \
-	sass \
 	scss_lint

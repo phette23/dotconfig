@@ -30,6 +30,7 @@ brew install ack \
 	python3 \
 	rbenv \
 	ruby-build \
+    sassc \
 	"source-highlight" \
 	tree \
 	vim \
