@@ -8,6 +8,8 @@ npm install -g --quiet \
   trash-cli \
   uglify-js
 
+# gd Mac OS & how it doesn't let you chown /usr/local drives me crazy
+sudo mkdir /usr/local/n && sudo chown $(whoami):staff /usr/local/n
 # install node stable with n
 n stable
 
