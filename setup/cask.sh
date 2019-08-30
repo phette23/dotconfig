@@ -19,14 +19,11 @@ brew cask install \
     iterm2 \
     slack \
     spotify \
-    torbrowser \
+    tor-browser \
     xquartz
-
-# now we can `brew install ghostscript` with X11, xquartz was a requirement
-brew install ghostscript --with-x11
 
 # useful Quick Look plugins for developers
 # https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip qlimagesize webpquicklook suspicious-package
 
 echo 'Remember to install Prey with an API key, using "API_KEY=blah brew cask install prey"'
