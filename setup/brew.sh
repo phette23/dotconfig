@@ -7,6 +7,8 @@ fi
 brew update
 
 # Install other useful packages
+# NOTE: we will uninstall node in npm.sh after using it to get N (my preferred 
+# node version manager) and then using N to get node stable
 brew install ack \
     archey \
     bash \
@@ -20,7 +22,6 @@ brew install ack \
     hub \
     jq \
     moreutils \
-    # NOTE: we uninstall this after using it to get N & using N to get node stable
     node \
     python \
     python3 \
