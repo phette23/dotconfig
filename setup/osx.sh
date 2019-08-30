@@ -6,25 +6,9 @@
 # exit if not OS X
 [[ $(uname) == 'Darwin' ]] || exit 1
 
-# Install XCode developer tools
-# @todo opens a dialog which needs to be interacted with, need to pause after
-xcode-select --install
-
 # Some tools look for XCode, even though they don't need it.
 if [[ ! -d "$('xcode-select' -print-path 2>/dev/null)" ]]; then
     sudo xcode-select -switch /
-fi
-
-# Install Homebrew.
-if [[ ! "$(type -P brew)" ]]; then
-    echo "Installing Homebrew"
-    true | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-if [[ "$(type -P brew)" ]]; then
-    echo "Updating Homebrew"
-    brew doctor
-    brew update
 fi
 
 # Close any open System Preferences panes, to prevent them from overriding
