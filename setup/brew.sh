@@ -7,7 +7,7 @@ fi
 brew update
 
 # Install other useful packages
-# NOTE: we will uninstall node in npm.sh after using it to get N (my preferred 
+# NOTE: we will uninstall node in npm.sh after using it to get N (my preferred
 # node version manager) and then using N to get node stable
 brew install ack \
     archey \
@@ -16,6 +16,7 @@ brew install ack \
     exiftool \
     exa \
     findutils \
+    fish \
     git \
     gnu-sed \
     grep \
@@ -34,6 +35,7 @@ brew install ack \
     wget \
     z
 
-# We got Bash? Add to /etc/shells & use updated Bash
+# Add homebrew bash & fish to /etc/shells & use fish
 echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/bash
+echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
