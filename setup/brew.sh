@@ -1,44 +1,39 @@
 #!/usr/bin/env bash -x
 if [ ! $(command -v brew) ]; then
-  echo 'You need to install homebrew first, silly!'
-  open "http://brew.sh"
-  exit 1
+  echo 'Installing Homebrew to /usr/local...'
+  cd /usr/local
+  mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 fi
 
 # Make sure we’re using the latest Homebrew
 brew update
 
-# Upgrade any already-installed formulae
-brew upgrade
-
 # Install other useful packages
 brew install ack \
-	archey \
-	bash \
-	coreutils \
-	exiftool \
-	findutils \
-	git \
-	gnu-sed \
-	grep \
-	jq \
-	moreutils \
-	perl-build \
-	phantomjs \
-	plenv \
-	python \
-	python3 \
-	rbenv \
-	ruby-build \
+    archey \
+    bash \
+    coreutils \
+    exiftool \
+    exa \
+    findutils \
+    git \
+    gnu-sed \
+    grep \
+    hub \
+    jq \
+    moreutils \
+    # NOTE: we uninstall this after using it to get N & using N to get node stable
+    node \
+    python \
+    python3 \
+    rbenv \
+    ruby-build \
     sassc \
-	"source-highlight" \
-	tree \
-	vim \
-	wget \
-	z
-
-# Remove outdated versions from the cellar
-brew cleanup
+    "source-highlight" \
+    tree \
+    vim \
+    wget \
+    z
 
 # We got Bash? Add to /etc/shells & use updated Bash
 echo '/usr/local/bin/bash' | sudo tee -a /etc/shells

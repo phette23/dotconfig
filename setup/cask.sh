@@ -5,20 +5,22 @@ if [ ! $(command -v brew) ]; then
   exit 1
 fi
 
-brew tap phinze/homebrew-cask
+brew tap homebrew/cask-versions
 
 brew cask install \
-  alfred \
-  atom \
-  dropbox \
-  evernote \
-  google-chrome \
-  imageoptim \
-  iterm2 \
-  slack \
-  spotify \
-  torbrowser \
-  xquartz
+    alfred \
+    atom \
+    dropbox \
+    evernote \
+    firefox \
+    google-chrome \
+    google-chrome-canary \
+    imageoptim \
+    iterm2 \
+    slack \
+    spotify \
+    torbrowser \
+    xquartz
 
 # now we can `brew install ghostscript` with X11, xquartz was a requirement
 brew install ghostscript --with-x11
