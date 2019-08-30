@@ -1,8 +1,8 @@
 #!/usr/bin/env bash -x
 if [ ! $(command -v brew) ]; then
-  echo 'Installing Homebrew to /usr/local...'
-  cd /usr/local
-  sudo mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+    cd /usr/local
+    sudo mkdir homebrew && sudo chown $(whoami):staff homebrew
+    curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 fi
 
 # Make sure we’re using the latest Homebrew
