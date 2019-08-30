@@ -3,7 +3,7 @@
 npm install -g --quiet \
   @babel/core \
   @babel/cli \
-  @babel/present-env \
+  @babel/preset-env \
   n \
   trash-cli \
   uglify-js
