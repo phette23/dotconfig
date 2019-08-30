@@ -2,7 +2,7 @@
 if [ ! $(command -v brew) ]; then
   echo 'Installing Homebrew to /usr/local...'
   cd /usr/local
-  mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+  sudo mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 fi
 
 # Make sure we’re using the latest Homebrew
