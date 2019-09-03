@@ -9,6 +9,7 @@ brew update
 # Install other useful packages
 # NOTE: we will uninstall node in npm.sh after using it to get N (my preferred
 # node version manager) and then using N to get node stable
+# gpm seems to be an unstated requirement for vim (via ruby)
 brew install ack \
     archey \
     bash \
@@ -19,6 +20,7 @@ brew install ack \
     fish \
     git \
     gnu-sed \
+    gpm \
     grep \
     hub \
     jq \
