@@ -1,5 +1,6 @@
 {
   "asi" : true,
+  "esversion" : 6,
   "indent" : false,
   "laxcomma" : true,
   "white" : false
