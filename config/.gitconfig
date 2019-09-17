@@ -83,6 +83,9 @@
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
+[pull]
+	rebase = true
+
 [rebase]
 	# Git won't rebase a dirty working tree, this works around that
 	autostash = true
