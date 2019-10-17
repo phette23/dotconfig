@@ -33,6 +33,8 @@
 	t = tag
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
+	# remove from staging
+	unstage = restore --staged
 
 [apply]
 	# Detect whitespace errors when applying a patch
