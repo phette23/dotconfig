@@ -38,6 +38,6 @@ brew install ack \
     z
 
 # Add homebrew bash & fish to /etc/shells & use fish
-echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
-echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
+grep '/usr/local/bin/bash' /etc/shells >/dev/null || echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
+grep '/usr/local/bin/fish' /etc/shells >/dev/null || echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 chsh -s /usr/local/bin/fish
