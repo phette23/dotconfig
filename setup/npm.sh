@@ -1,12 +1,8 @@
 #!/usr/bin/env bash -x
 # install global NPM packages
 npm install -g --quiet \
-  @babel/core \
-  @babel/cli \
-  @babel/preset-env \
   n \
-  trash-cli \
-  uglify-js
+  trash-cli
 
 # gd Mac OS & how it doesn't let you chown /usr/local drives me crazy
 sudo mkdir /usr/local/n && sudo chown $(whoami):staff /usr/local/n
