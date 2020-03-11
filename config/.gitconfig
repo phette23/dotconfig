@@ -1,5 +1,6 @@
 [alias]
 	a = add
+	alias = !"git config -l | grep alias | cut -c 7-"
 	br = branch -avv
 	# Simpler commit, add
 	c = commit -m
