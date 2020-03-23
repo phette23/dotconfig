@@ -10,7 +10,6 @@ brew tap homebrew/cask-versions
 brew cask install \
     alfred \
     atom \
-    dropbox \
     evernote \
     firefox \
     google-chrome \
@@ -25,5 +24,3 @@ brew cask install \
 # useful Quick Look plugins for developers
 # https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip qlimagesize webpquicklook suspicious-package
-
-echo 'Remember to install Prey with an API key, using "API_KEY=blah brew cask install prey"'
