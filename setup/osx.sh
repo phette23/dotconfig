@@ -32,6 +32,7 @@ sudo mkdir /etc/cron
 # full list of system and app settings
 
 # use dark mode (introduced in 10.10 Yosemite)
+# @TODO this doesn't seem to work (tried on 10.15.3 Catalina)
 sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
 defaults write -g AppleInterfaceStyle -string "Dark"
 
@@ -77,6 +78,8 @@ sudo systemsetup -setrestartfreeze on
 
 # Never go into computer sleep mode
 sudo systemsetup -setcomputersleep Off > /dev/null
+# Display sleep after 15 minutes
+sudo pmset -a displaysleep 15
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
