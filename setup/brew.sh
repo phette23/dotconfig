@@ -26,6 +26,7 @@ brew install ack \
     jq \
     moreutils \
     node \
+    pipenv \
     pyenv \
     python \
     python3 \
