@@ -34,6 +34,7 @@ brew install ack \
     ruby-build \
     sassc \
     "source-highlight" \
+    tldr \
     tree \
     vim \
     wget \
