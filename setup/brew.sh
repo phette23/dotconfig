@@ -28,10 +28,7 @@ brew install ack \
     node \
     pipenv \
     pyenv \
-    python \
-    python3 \
     rbenv \
-    ruby-build \
     sassc \
     "source-highlight" \
     tldr \
