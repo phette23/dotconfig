@@ -32,6 +32,7 @@ brew install ack \
     sassc \
     "source-highlight" \
     tldr \
+    todo-txt \
     tree \
     vim \
     wget \
