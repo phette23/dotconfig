@@ -528,6 +528,7 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 mkdir ~/.atom
 # Note: repo will be read only until an SSH key is set up on new machine
 git clone https://github.com/phette23/dot-atom.git ~/.atom
+command -v apm 2&>/dev/null && apm install --packages-file ~/.atom/apm.txt
 
 ###############################################################################
 # TextEdit and Disk Utility                                                   #
