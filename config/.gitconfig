@@ -116,3 +116,5 @@
 	default = matching
 	# push annotated tags, too
 	followTags = true
+[init]
+	defaultBranch = main
