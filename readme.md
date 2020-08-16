@@ -16,7 +16,7 @@ The included "copy.sh" script copies all the configuration files (not the setup 
 
 ## Setup Notes/Order
 
-On a new Mac, this is the general order of things:
+(See also my [new mac](https://gist.github.com/phette23/735f2816b261cb7592be4bd36e24d987) gist) On a new Mac, this is the general order of things:
 
 1. `git` won't even work at first without XCode, so open App Store & spend an hour installing it
 1. `git clone https://github.com/phette23/bashrc.git && cd bashrc && ./copy.sh`
