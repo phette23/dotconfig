@@ -10,7 +10,6 @@ brew tap homebrew/cask-versions
 brew cask install \
     alfred \
     atom \
-    evernote \
     firefox \
     google-chrome \
     google-chrome-canary \
@@ -23,4 +22,4 @@ brew cask install \
 
 # useful Quick Look plugins for developers
 # https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip qlimagesize webpquicklook suspicious-package
+brew cask install qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip webpquicklook
