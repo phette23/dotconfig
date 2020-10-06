@@ -22,4 +22,4 @@ brew cask install \
 
 # useful Quick Look plugins for developers
 # https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip webpquicklook
+brew cask install qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip webpquicklook
