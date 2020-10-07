@@ -15,6 +15,8 @@ brew cask install \
     google-chrome-canary \
     imageoptim \
     iterm2 \
+    psequel \
+    sequel-pro \
     slack \
     spotify \
     tor-browser \
