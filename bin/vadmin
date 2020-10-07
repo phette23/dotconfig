@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+jq -r '.password' ${HOME}/.equellarc | tr -d '\n' | pbcopy
+# Path to OpenEQUELLA Admin Console Launcher script, download from
+# https://github.com/openequella/openEQUELLA-admin-console-package/releases
+/Applications/admin-console/Mac-launcher.sh 2&>/dev/null &
