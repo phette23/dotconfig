@@ -612,3 +612,4 @@ done
 
 echo "Done! Some changes require a logout/restart to take effect."
 echo "Also, don't forget to add '%admin ALL=(ALL) NOPASSWD: /usr/sbin/softwareupdate' to /etc/sudoers so you don't have to type your password when running the upd alias."
+echo "Run 'sudo visudo /etc/sudoers' to edit the file."
