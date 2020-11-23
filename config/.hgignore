@@ -4,10 +4,6 @@ syntax: glob
 # Compiled Python files
 *.pyc
 
-# Sublime Text files
-*.sublime-project
-*.sublime-workspace
-
 # logs
 *.log
 
@@ -31,6 +27,3 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
-
-# Google Drive
-Icon?
