@@ -24,7 +24,7 @@
 	# erase knowledge of branches that no longer exist on the remote
 	pr = remote prune origin
 	# Pull in remote changes for the current repository and all its submodules
-	pul = !"git pull --rebase; git submodule foreach git pull origin main"
+	pul = !"git pull --rebase; git submodule update --recursive"
 	# Push local branch to the same name on remote & set up tracking
 	puu = push -u origin HEAD
 	# Interactive rebase with the given number of latest commits
