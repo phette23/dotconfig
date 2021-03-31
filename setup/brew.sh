@@ -24,10 +24,11 @@ brew install ack \
     grep \
     hub \
     jq \
+    miller \
     moreutils \
     node \
+    pandoc \
     pipenv \
-    pyenv \
     rbenv \
     sassc \
     "source-highlight" \

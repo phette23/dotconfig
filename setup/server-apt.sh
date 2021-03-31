@@ -8,7 +8,6 @@ sudo apt-get -y install \
     curl \
     fail2ban \
     git \
-    mongodb \
     ngrep \
     openssh-server \
     python-pip \

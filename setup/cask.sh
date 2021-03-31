@@ -10,9 +10,9 @@ brew tap homebrew/cask-versions
 brew cask install \
     alfred \
     atom \
+    discord \
     firefox \
     google-chrome \
-    google-chrome-canary \
     imageoptim \
     iterm2 \
     psequel \
