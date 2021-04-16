@@ -18,11 +18,11 @@ brew install ack \
     exa \
     findutils \
     fish \
+    gh \
     git \
     gnu-sed \
     gpm \
     grep \
-    hub \
     jq \
     miller \
     moreutils \
