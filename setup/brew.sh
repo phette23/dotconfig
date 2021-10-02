@@ -11,7 +11,6 @@ brew update
 # node version manager) and then using N to get node stable
 # gpm seems to be an unstated requirement for vim (via ruby)
 brew install ack \
-    archey \
     bash \
     coreutils \
     exiftool \
@@ -26,12 +25,13 @@ brew install ack \
     jq \
     miller \
     moreutils \
+    neofetch \
     node \
     pandoc \
     pipenv \
     rbenv \
     sassc \
-    "source-highlight" \
+    source-highlight \
     tldr \
     todo-txt \
     tree \
