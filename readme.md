@@ -19,6 +19,7 @@ The included "copy.sh" script copies all the configuration files (not the setup 
 (See also my [new mac](https://gist.github.com/phette23/735f2816b261cb7592be4bd36e24d987) gist) On a new Mac, this is the general order of things:
 
 1. `git` won't even work at first without XCode, so open App Store & spend an hour installing it
+	+ `xcode-select --install` is _supposed_ to be enough but I've had problems with it in the past
 1. `git clone https://github.com/phette23/bashrc.git && cd bashrc && ./copy.sh`
 1. `setup/brew.sh` must come before npm.sh, makes sense to run before py & ruby
 1. `setup/cask.sh`
