@@ -32,7 +32,7 @@ brew install ack \
     rbenv \
     sassc \
     source-highlight \
-    tldr \
+    tealdeer \
     todo-txt \
     tree \
     vim \
