@@ -9,7 +9,6 @@ brew tap homebrew/cask-versions
 
 brew cask install \
     alfred \
-    atom \
     discord \
     firefox \
     google-chrome \
@@ -20,6 +19,7 @@ brew cask install \
     slack \
     spotify \
     tor-browser \
+    visual-studio-code \
     xquartz
 
 # useful Quick Look plugins for developers
