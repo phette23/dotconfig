@@ -7,7 +7,7 @@ fi
 
 brew tap homebrew/cask-versions
 
-brew cask install \
+brew install --cask \
     alfred \
     discord \
     firefox \
@@ -24,4 +24,4 @@ brew cask install \
 
 # useful Quick Look plugins for developers
 # https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip webpquicklook
+brew install --cask qlmarkdown quicklook-json quicklook-csv webpquicklook
