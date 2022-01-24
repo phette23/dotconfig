@@ -1,120 +1,123 @@
 [alias]
-	a = add
-	alias = !"git config -l | grep alias | cut -c 7-"
-	br = branch -avv
-	brd = branch -D
-	# Simpler commit, add
-	c = commit -m
-	# Commit all changes
-	ca = commit -am
-	# Clone a repository including all submodules
-	cl = clone --recursive
-	co = checkout
-	# Show the diff between the latest commit and the current state
-	d = diff
-	# `git di $number` shows the diff between the state `$number` revisions ago and the current state
-	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
-	# Switch to a branch, creating it if necessary
-	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
-	# View abbreviated SHA, description, and history graph of the latest 20 commits
-	l = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-	p = push
-	# Push tags
-	pt = push origin --tags
-	# erase knowledge of branches that no longer exist on the remote
-	pr = remote prune origin
-	# Pull in remote changes for the current repository and all its submodules
-	pul = !"git pull --rebase; git submodule update --recursive"
-	# Push local branch to the same name on remote & set up tracking
-	puu = push -u origin HEAD
-	# Interactive rebase with the given number of latest commits
-	reb = "!r() { git rebase -i HEAD~$1; }; r"
-	rem = remote -v
-	# View the current working tree status using the short format
-	s = status -sb
-	# Squash last commit into one before it
-	sq = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B -n ${1})\"; };f"
-	t = tag
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
-	# remove from staging
-	unstage = restore --staged
+    a = add
+    alias = !"git config -l | grep alias | cut -c 7-"
+    br = branch -avv
+    brd = branch -D
+    # Simpler commit, add
+    c = commit -m
+    # Commit all changes
+    ca = commit -am
+    # Clone a repository including all submodules
+    cl = clone --recursive
+    co = checkout
+    # Show the diff between the latest commit and the current state
+    d = diff
+    # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+    di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+    # Switch to a branch, creating it if necessary
+    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+    # View abbreviated SHA, description, and history graph of the latest 20 commits
+    l = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    p = push
+    # Push tags
+    pt = push origin --tags
+    # erase knowledge of branches that no longer exist on the remote
+    pr = remote prune origin
+    # Pull in remote changes for the current repository and all its submodules
+    pul = !"git pull --rebase; git submodule update --recursive"
+    # Push local branch to the same name on remote & set up tracking
+    puu = push -u origin HEAD
+    # Interactive rebase with the given number of latest commits
+    reb = "!r() { git rebase -i HEAD~$1; }; r"
+    rem = remote -v
+    # View the current working tree status using the short format
+    s = status -sb
+    # Squash last commit into one before it
+    sq = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B -n ${1})\"; };f"
+    t = tag
+    # Show verbose output about tags, branches or remotes
+    tags = tag -l
+    # remove from staging
+    unstage = restore --staged
 
 [apply]
-	# Detect whitespace errors when applying a patch
-	whitespace = fix
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
 
 [core]
-	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.hgignore
-	attributesfile = ~/.gitattributes
-	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and
-	# all kinds of trailing whitespace as an error.
-	# [default] trailing-space: looks for spaces at the end of a line
-	# [default] space-before-tab: looks for spaces before tabs at the beginning of
-	# a line
-	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
-	# Make `git rebase` safer on OS X
- 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
- 	trustctime = false
-	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
-	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
-	precomposeunicode = false
+    # Use custom `.gitignore` and `.gitattributes`
+    excludesfile = ~/.hgignore
+    attributesfile = ~/.gitattributes
+    # Treat spaces before tabs, lines that are indented with 8 or more spaces, and
+    # all kinds of trailing whitespace as an error.
+    # [default] trailing-space: looks for spaces at the end of a line
+    # [default] space-before-tab: looks for spaces before tabs at the beginning of
+    # a line
+    whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+    # Make `git rebase` safer on OS X
+     # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+     trustctime = false
+    # Prevent showing files whose names contain non-ASCII symbols as unversioned.
+    # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
+    precomposeunicode = false
 
 [color]
-	# Use colors in Git commands that are capable of colored output when
-	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-	ui = auto
+    # Use colors in Git commands that are capable of colored output when
+    # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+    ui = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[diff]
+    submodule = log
 
 [diff "exif"]
-	textconv = exiftool
+    textconv = exiftool
 
 [help]
-	autocorrect = 1
+    autocorrect = 1
 
 [merge]
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
+    # Include summaries of merged commits in newly created merge commit messages
+    log = true
 
 [pull]
-	rebase = true
+    rebase = true
 
 [rebase]
-	# Git won't rebase a dirty working tree, this works around that
-	autostash = true
+    # Git won't rebase a dirty working tree, this works around that
+    autostash = true
 
 # URL shorthands
 [url "git@github.com:"]
-	insteadOf = "gh:"
-	pushInsteadOf = "github:"
-	pushInsteadOf = "git://github.com/"
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
 [url "git://github.com/"]
-	insteadOf = "github:"
+    insteadOf = "github:"
 [url "git@gitlab.com:"]
-	insteadOf = "gl:"
+    insteadOf = "gl:"
 [url "https://github.com/"]
-	insteadOf = "hgh:"
+    insteadOf = "hgh:"
 
 [user]
-	name = phette23
-	email = phette23@gmail.com
+    name = phette23
+    email = phette23@gmail.com
 
 [push]
-	default = matching
-	# push annotated tags, too
-	followTags = true
+    default = matching
+    # push annotated tags, too
+    followTags = true
 [init]
-	defaultBranch = main
+    defaultBranch = main
