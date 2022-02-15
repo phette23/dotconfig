@@ -4,9 +4,9 @@
     br = branch -avv
     brd = branch -D
     # Simpler commit, add
-    c = commit -m
+    c = commit -S -m
     # Commit all changes
-    ca = commit -am
+    ca = commit -S -am
     # Clone a repository including all submodules
     cl = clone --recursive
     co = checkout
@@ -61,10 +61,6 @@
     # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
     precomposeunicode = false
 
-[color]
-    # Use colors in Git commands that are capable of colored output when
-    # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
-    ui = auto
 [color "branch"]
     current = yellow reverse
     local = yellow
@@ -79,6 +75,9 @@
     changed = green
     untracked = cyan
 
+[commit]
+    gpgsign = true
+
 [diff]
     submodule = log
 
@@ -88,12 +87,20 @@
 [help]
     autocorrect = 1
 
+[init]
+    defaultBranch = main
+
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
     log = true
 
 [pull]
     rebase = true
+
+[push]
+    default = matching
+    # push annotated tags, too
+    followTags = true
 
 [rebase]
     # Git won't rebase a dirty working tree, this works around that
@@ -114,10 +121,4 @@
 [user]
     name = phette23
     email = phette23@gmail.com
-
-[push]
-    default = matching
-    # push annotated tags, too
-    followTags = true
-[init]
-    defaultBranch = main
+    signingkey = DC78D0C0DF787B67
