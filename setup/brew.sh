@@ -20,9 +20,11 @@ brew install ack \
     gh \
     git \
     gnu-sed \
+    gpg-suite-no-mail \
     gpm \
     grep \
     jq \
+    marcli \
     miller \
     moreutils \
     neofetch \
