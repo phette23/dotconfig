@@ -31,6 +31,7 @@ brew install ack \
     node \
     pandoc \
     pipenv \
+    pyenv \
     rbenv \
     sassc \
     source-highlight \
