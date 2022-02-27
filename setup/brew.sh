@@ -12,6 +12,7 @@ brew update
 # gpm seems to be an unstated requirement for vim (via ruby)
 brew install ack \
     bash \
+    bat \
     coreutils \
     exiftool \
     exa \
