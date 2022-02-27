@@ -610,6 +610,16 @@ for app in "Address Book" \
 	killall "$app" > /dev/null 2>&1
 done
 
+# https://github.com/MikeMcQuaid/dotfiles/blob/master/bin/touchid-enable-pam-sudo
+if [ -f /etc/pam.d/sudo ]; then
+    echo "auth       sufficient     pam_tid.so" | pbcopy
+    echo -n "Want to enable touch ID for sudo by adding the line 'auth       sufficient     pam_tid.so' to the /etc/pam.d/sudo configuration file? The config text has been copied to your keyboard, so you can paste it in the editor that will open. (y/n) "
+    read response
+    if [ "$response" = "y" ]; then
+        sudo vim /etc/pam.d/sudo
+    fi
+fi
+
 echo "Done! Some changes require a logout/restart to take effect."
 echo "Also, don't forget to add '%admin ALL=(ALL) NOPASSWD: /usr/sbin/softwareupdate' to /etc/sudoers so you don't have to type your password when running the upd alias."
 echo "Run 'sudo visudo /etc/sudoers' to edit the file."
