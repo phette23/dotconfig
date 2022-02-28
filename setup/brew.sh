@@ -14,8 +14,11 @@ brew install ack \
     bash \
     bat \
     coreutils \
+    duf \
+    dust \
     exiftool \
     exa \
+    fd \
     findutils \
     fish \
     gh \
@@ -24,10 +27,12 @@ brew install ack \
     gpg-suite-no-mail \
     gpm \
     grep \
+    htop \
     jq \
     marcli \
     miller \
     moreutils \
+    ncdu \
     neofetch \
     node \
     pandoc \
