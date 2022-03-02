@@ -9,6 +9,7 @@ brew tap homebrew/cask-versions
 
 brew install --cask \
     alfred \
+    docker \
     discord \
     firefox \
     google-chrome \
