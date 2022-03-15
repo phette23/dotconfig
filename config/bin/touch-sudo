@@ -15,7 +15,7 @@ if os.geteuid() != 0:
     exit(0)
 
 if os.path.exists(sudo_file):
-    with open(sudo_file, 'w') as fh:
+    with open(sudo_file, 'r+') as fh:
         text = fh.read()
         first_line = text.split('\n')[0]
         if re.match('# sudo: auth account password session', first_line):
