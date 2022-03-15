@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+import argparse
+import os
+import re
+import subprocess
+
+sudo_file = '/etc/pam.d/sudo'
+
+parser = argparse.ArgumentParser(description='Use touch instead of password to run sudo commands. Must be run as root because it edits the {} file.'.format(sudo_file))
+parser.parse_args()
+
+if os.geteuid() != 0:
+    print("Rerunning script with sudo...")
+    subprocess.call(['sudo', __file__])
+    exit(0)
+
+if os.path.exists(sudo_file):
+    with open(sudo_file, 'w') as fh:
+        text = fh.read()
+        first_line = text.split('\n')[0]
+        if re.match('# sudo: auth account password session', first_line):
+            fh.write(text.replace(first_line, first_line +
+                         '\nauth       sufficient     pam_tid.so'))
+        else:
+            print("Didn't find the first line I was expecting, exiting as a precaution.")
+            print("Inspect {} to ensure that the file's format hasn't changed.".format(sudo_file))
+            fh.write(text)
+            exit(1)
+else:
+    print("/etc/pam.d/sudo does not exist, did it move?")
+    exit(1)
