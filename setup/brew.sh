@@ -40,7 +40,6 @@ brew install ack \
     pyenv \
     rbenv \
     sassc \
-    source-highlight \
     tealdeer \
     todo-txt \
     tree \
