@@ -28,6 +28,7 @@ brew install ack \
     gpm \
     grep \
     htop \
+    jc \
     jq \
     marcli \
     miller \
