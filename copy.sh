@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-rsync -avz --progress config/. ~
+rsync -avz --progress --exclude .DS_Store config/. ~
