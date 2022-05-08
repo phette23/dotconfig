@@ -14,6 +14,7 @@ brew install ack \
     bash \
     bat \
     coreutils \
+    difftastic \
     duf \
     dust \
     exiftool \

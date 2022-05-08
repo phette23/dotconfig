@@ -79,6 +79,7 @@
     gpgsign = true
 
 [diff]
+    external = difft
     submodule = log
 
 [diff "exif"]
