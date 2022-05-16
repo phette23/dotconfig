@@ -1,6 +1,6 @@
 [alias]
     a = add
-    alias = !"git config -l | grep alias | cut -c 7-"
+    alias = "!git config -l | grep alias | cut -c 7-"
     br = branch -avv
     brd = branch -D
     # Simpler commit, add
@@ -9,13 +9,12 @@
     ca = commit -S -am
     # Clone a repository including all submodules
     cl = clone --recursive
-    co = checkout
+    # checkout branch or create it if it does not exist yet
+    co = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
     # Show the diff between the latest commit and the current state
     d = diff
     # `git di $number` shows the diff between the state `$number` revisions ago and the current state
-    di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
-    # Switch to a branch, creating it if necessary
-    go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+    di = "!d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
     # View abbreviated SHA, description, and history graph of the latest 20 commits
     l = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     p = push
@@ -24,7 +23,7 @@
     # erase knowledge of branches that no longer exist on the remote
     pr = remote prune origin
     # Pull in remote changes for the current repository and all its submodules
-    pul = !"git pull --rebase; git submodule update --recursive"
+    pul = "!git pull --rebase; git submodule update --recursive"
     # Push local branch to the same name on remote & set up tracking
     puu = push -u origin HEAD
     # Interactive rebase with the given number of latest commits
