@@ -8,6 +8,7 @@ fi
 brew tap homebrew/cask-versions
 
 brew install --cask \
+    1password/tap/1password-cli \
     alfred \
     docker \
     discord \
