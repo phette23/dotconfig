@@ -363,11 +363,9 @@ defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
-# Top left screen corner → Mission Control
-defaults write com.apple.dock wvous-tl-corner -int 2
+defaults write com.apple.dock wvous-tl-corner -int 0
 defaults write com.apple.dock wvous-tl-modifier -int 0
-# Bottom left screen corner → Dashboard
-defaults write com.apple.dock wvous-bl-corner -int 7
+defaults write com.apple.dock wvous-bl-corner -int 0
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
 ###############################################################################
