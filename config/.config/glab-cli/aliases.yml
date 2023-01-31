@@ -1,0 +1,5 @@
+ci: pipeline ci
+co: mr checkout
+vw: repo view --web
+live: ci status --live
+ils: issue list
