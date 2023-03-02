@@ -16,7 +16,6 @@ brew install --cask \
     google-chrome \
     imageoptim \
     iterm2 \
-    psequel \
     sequel-pro \
     slack \
     spotify \
