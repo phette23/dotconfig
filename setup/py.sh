@@ -1,5 +1,4 @@
 #!/usr/bin/env bash -x
 # setup Python modules
-sudo easy_install pip
-
-sudo -H pip install csvkit --ignore-installed six
+python3 -m pip install --upgrade pip
+python3 -m pip install csvkit
