@@ -7,22 +7,25 @@ fi
 
 brew tap homebrew/cask-versions
 
-brew install --cask \
-    1password/tap/1password-cli \
-    alfred \
-    docker \
-    discord \
-    firefox \
-    google-chrome \
-    imageoptim \
-    iterm2 \
-    sequel-pro \
-    slack \
-    spotify \
-    tor-browser \
-    visual-studio-code \
-    xquartz
+bic () { brew install --cask $1 }
+
+bic 1password/tap/1password-cli
+bic alfred
+bic docker
+bic discord
+bic firefox
+bic google-chrome
+bic imageoptim
+bic iterm2
+bic slack
+bic spotify
+bic tor-browser
+bic visual-studio-code
+bic xquartz
 
 # useful Quick Look plugins for developers
 # https://github.com/sindresorhus/quick-look-plugins
-brew install --cask qlmarkdown quicklook-json quicklook-csv webpquicklook
+bic qlmarkdown
+bic quicklook-json
+bic quicklook-csv
+bic webpquicklook
