@@ -9,6 +9,7 @@ brew tap homebrew/cask-versions
 
 bic () { brew install --cask $1 }
 
+bic 1password
 bic 1password/tap/1password-cli
 bic alfred
 bic docker
