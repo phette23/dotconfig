@@ -7,10 +7,9 @@ npm i -g pnpm
 pnpm setup
 export PNPM_HOME="~/Library/pnpm"
 export PATH="$PNPM_HOME":$PATH
+pnpm install -g n fx trash-cli
 # install node stable with n
-pnpm install -g n
 n stable
-pnpm install -g fx trash-cli
 
 # remove homebrew node, we will use n for node version management
 echo "If that this suceeded, you can remove the hombrew node with 'brew uninstall node'"
