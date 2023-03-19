@@ -590,6 +590,29 @@ a2l -f "iTerm"
 unset a2l
 
 ###############################################################################
+# Time Machine exclusions                                                     #
+###############################################################################
+sudo tmutil addexclusion -p /Applications
+sudo tmutil addexclusion -p /usr/local/Caskroom
+sudo tmutil addexclusion -p /usr/local/Cellar
+sudo tmutil addexclusion -p /usr/local/Homebrew
+sudo tmutil addexclusion -p /usr/local/n
+sudo tmutil addexclusion -p ~/.bundle
+sudo tmutil addexclusion -p ~/.kube
+sudo tmutil addexclusion -p ~/.local
+sudo tmutil addexclusion -p ~/.minikube
+sudo tmutil addexclusion -p ~/.node
+sudo tmutil addexclusion -p ~/.npm
+sudo tmutil addexclusion -p ~/.pyenv
+sudo tmutil addexclusion -p ~/Applications
+sudo tmutil addexclusion -p ~/Creative\ Cloud\ Files
+sudo tmutil addexclusion -p ~/Google\ Drive
+sudo tmutil addexclusion -p ~/Library/Caches
+sudo tmutil addexclusion -p ~/Library/Containers/com.docker.docker
+sudo tmutil addexclusion -p ~/Library/pnpm
+sudo tmutil addexclusion -p ~/go
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
