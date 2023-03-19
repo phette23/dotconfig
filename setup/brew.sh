@@ -50,6 +50,11 @@ brew install ack \
     wget \
     z
 
+brew tap homebrew/aliases && {
+    brew alias cmd commands
+    brew alias i install
+}
+
 # Add homebrew bash & fish to /etc/shells & use fish
 grep '/usr/local/bin/bash' /etc/shells >/dev/null || echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
 grep '/usr/local/bin/fish' /etc/shells >/dev/null || echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
