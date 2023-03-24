@@ -1,34 +1,22 @@
-#!/usr/bin/env python3
-import argparse
-import os
-import re
-import subprocess
-
-sudo_file = '/etc/pam.d/sudo'
-touch_id = 'auth       sufficient     pam_tid.so'
-
-parser = argparse.ArgumentParser(description='Use touch instead of password to run sudo commands. Must be run as root because it edits the {} file.'.format(sudo_file))
-parser.parse_args()
-
-if os.geteuid() != 0:
-    print("Rerunning script with sudo...")
-    subprocess.call(['sudo', __file__])
-    exit(0)
-
-if os.path.exists(sudo_file):
-    with open(sudo_file, 'r+') as fh:
-        text = fh.read()
-        first_line = text.split('\n')[0]
-        if re.match('# sudo: auth account password session', first_line):
-            if not re.match(touch_id, text):
-                fh.write(f'\n{touch_id}')
-            else:
-                print('The "auth sufficient pam_tid.so" line is already present, exiting.')
-                exit(1)
-        else:
-            print("Didn't find the first line I was expecting, exiting as a precaution.")
-            print("Inspect {} to ensure that the file's format hasn't changed.".format(sudo_file))
-            exit(1)
-else:
-    print("/etc/pam.d/sudo does not exist, did it move?")
-    exit(1)
+#!/usr/bin/env bash
+# https://github.com/MikeMcQuaid/strap/blob/master/bin/strap.sh
+# Check and, if necessary, enable sudo authentication using TouchID.
+# Don't care about non-alphanumeric filenames when doing a specific match
+# shellcheck disable=SC2010
+if ls /usr/lib/pam | grep "$Q" "pam_tid.so"; then
+  logn "Configuring sudo authentication using TouchID:"
+  PAM_FILE="/etc/pam.d/sudo"
+  FIRST_LINE="# sudo: auth account password session"
+  if grep "$Q" pam_tid.so "$PAM_FILE"; then
+    logk
+  elif ! head -n1 "$PAM_FILE" | grep "$Q" "$FIRST_LINE"; then
+    logskip "$PAM_FILE is not in the expected format!"
+  else
+    TOUCHID_LINE="auth       sufficient     pam_tid.so"
+    sudo_askpass sed -i .bak -e \
+      "s/$FIRST_LINE/$FIRST_LINE\n$TOUCHID_LINE/" \
+      "$PAM_FILE"
+    sudo_askpass rm "$PAM_FILE.bak"
+    logk
+  fi
+fi
