@@ -3,20 +3,19 @@
 # Check and, if necessary, enable sudo authentication using TouchID.
 # Don't care about non-alphanumeric filenames when doing a specific match
 # shellcheck disable=SC2010
-if ls /usr/lib/pam | grep "$Q" "pam_tid.so"; then
-  logn "Configuring sudo authentication using TouchID:"
+if ls /usr/lib/pam | grep -q "pam_tid.so"; then
+  echo "Configuring sudo authentication using TouchID:"
   PAM_FILE="/etc/pam.d/sudo"
   FIRST_LINE="# sudo: auth account password session"
-  if grep "$Q" pam_tid.so "$PAM_FILE"; then
-    logk
-  elif ! head -n1 "$PAM_FILE" | grep "$Q" "$FIRST_LINE"; then
-    logskip "$PAM_FILE is not in the expected format!"
+  if grep -q pam_tid.so "$PAM_FILE"; then
+    echo "OK"
+  elif ! head -n1 "$PAM_FILE" | grep -q "$FIRST_LINE"; then
+    echo "$PAM_FILE is not in the expected format!"
   else
     TOUCHID_LINE="auth       sufficient     pam_tid.so"
-    sudo_askpass sed -i .bak -e \
+    sudo sed -i .bak -e \
       "s/$FIRST_LINE/$FIRST_LINE\n$TOUCHID_LINE/" \
-      "$PAM_FILE"
-    sudo_askpass rm "$PAM_FILE.bak"
-    logk
+      "$PAM_FILE" && sudo rm "$PAM_FILE.bak"
+    echo "OK"
   fi
 fi
