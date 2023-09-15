@@ -56,8 +56,8 @@
     # a line
     whitespace = space-before-tab,-indent-with-non-tab,trailing-space
     # Make `git rebase` safer on OS X
-     # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
-     trustctime = false
+    # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+    trustctime = false
     # Prevent showing files whose names contain non-ASCII symbols as unversioned.
     # http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
     precomposeunicode = false
