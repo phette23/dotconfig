@@ -11,6 +11,7 @@ brew update
 # node version manager) and then using N to get node stable
 # gpm seems to be an unstated requirement for vim (via ruby)
 brew install ack \
+    asdf \
     bash \
     bat \
     coreutils \
@@ -41,7 +42,6 @@ brew install ack \
     pandoc \
     pipenv \
     pyenv \
-    rbenv \
     sassc \
     tealdeer \
     todo-txt \
