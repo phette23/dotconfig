@@ -342,8 +342,7 @@ find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -dele
 
 # Wipe the Dock clean using dockutil (if we have homebrew already)
 if command -v brew >/dev/null; then
-    brew install dockutil
-    dockutil --remove all
+    brew install dockutil && dockutil --remove all
 fi
 
 # Add a spacer to the left side of the Dock (where the applications are)
