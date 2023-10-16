@@ -5,6 +5,7 @@
 # will wipe out your existing python & break packages installed under it
 # https://justinmayer.com/posts/homebrew-python-is-not-for-you/
 pyenv install 3.11 && pyenv global 3.11
+pyenv init - | source
 python -m pip install --upgrade pip
 python -m pip install csvkit \
     unoconv

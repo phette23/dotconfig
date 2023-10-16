@@ -4,7 +4,7 @@ if [ ! "$(command -v brew)" ]; then
 fi
 
 # if Apple M1 homebrew dir is not on path, add it
-HDIR="/opt/Homebrew/bin"
+HDIR="/opt/homebrew/bin"
 if [ -d $HDIR ] && [[ ":$PATH:" != *":$HDIR:"* ]]; then
     PATH="$HDIR${PATH:+":$PATH"}"
 fi
@@ -25,7 +25,7 @@ brew install ack \
     duf \
     dust \
     exiftool \
-    exa \
+    eza \
     fd \
     findutils \
     fish \
@@ -57,12 +57,13 @@ brew install ack \
     z
 
 brew tap homebrew/aliases && {
-    brew alias cmd commands
-    brew alias i install
+    brew alias cmd=commands
+    brew alias i=install
 }
 
 # Add homebrew bash & fish to /etc/shells & use fish
 echo 'Ading homebrew bash and fish to /etc/shells, requires sudo'
-grep '/usr/local/bin/bash' /etc/shells >/dev/null || echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
-grep '/usr/local/bin/fish' /etc/shells >/dev/null || echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
+PREFIX=$(brew --prefix)
+grep "$PREFIX/bin/bash" /etc/shells >/dev/null || echo "$PREFIX/bin/bash" | sudo tee -a /etc/shells
+grep "$PREFIX/bin/fish" /etc/shells >/dev/null || echo "$PREFIX/bin/fish" | sudo tee -a /etc/shells
+chsh -s "$PREFIX/bin/fish"
