@@ -9,13 +9,13 @@ brew tap homebrew/cask-versions
 
 bic () { brew install --cask $1; }
 
-bic 1password
+[ -d /Applications/1Password.app ] || bic 1password
 bic 1password/tap/1password-cli
 bic alfred
 bic docker
 bic discord
 bic firefox
-bic google-chrome
+[ -d "/Applications/Google Chrome.app" ] || bic google-chrome
 bic imageoptim
 bic iterm2
 bic slack
