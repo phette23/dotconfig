@@ -1,6 +1,12 @@
 #!/usr/bin/env bash -x
-if [ ! $(command -v brew) ]; then
+if [ ! "$(command -v brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# if Apple M1 homebrew dir is not on path, add it
+HDIR="/opt/Homebrew/bin"
+if [ -d $HDIR ] && [[ ":$PATH:" != *":$HDIR:"* ]]; then
+    PATH="$HDIR${PATH:+":$PATH"}"
 fi
 
 # Make sure we’re using the latest Homebrew
