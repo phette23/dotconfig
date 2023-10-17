@@ -14,8 +14,7 @@ The "copy.sh" script syncs all the configuration files into your home directory.
 
 (See also my [new mac](https://gist.github.com/phette23/735f2816b261cb7592be4bd36e24d987) gist) On a new Mac, this is the general order of things:
 
-1. `git` won't even work at first without XCode, so open App Store & spend an hour installing it
-	+ `xcode-select --install` is _supposed_ to be enough but I've had problems with it in the past
+1. `xcode-select --install` to make `git` work
 1. `mkdir ~/Code && cd ~/Code && git clone https://github.com/phette23/dotconfig.git && cd dotconfig && ./copy.sh`
 1. `./setup/brew.sh` must come before npm.sh, makes sense to run before py & ruby
 1. `./setup/cask.sh`
