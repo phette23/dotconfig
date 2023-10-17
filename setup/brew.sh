@@ -41,6 +41,7 @@ brew install ack \
     jq \
     marcli \
     miller \
+    minikube \
     moreutils \
     ncdu \
     neofetch \
@@ -49,6 +50,7 @@ brew install ack \
     pipenv \
     pyenv \
     sassc \
+    skaffold \
     tealdeer \
     todo-txt \
     tree \
