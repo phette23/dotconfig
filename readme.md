@@ -10,6 +10,8 @@ The shell-agnostic pieces of my dotfiles, consisting of configuration files for 
 
 The "copy.sh" script syncs all the configuration files into your home directory.
 
+Crontab can be installed with `sudo crontab -u (whoami) -f crontab`.
+
 ## Setup Notes/Order
 
 (See also my [new mac](https://gist.github.com/phette23/735f2816b261cb7592be4bd36e24d987) gist) On a new Mac, this is the general order of things:
