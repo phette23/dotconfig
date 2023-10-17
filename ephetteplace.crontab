@@ -1,0 +1,6 @@
+# M H D M Weekday
+0 9 * * 2 say "Check the enrollment logs" && open "https://moodle.cca.edu/admin/tasklogs.php?filter=enrol_database\%5Ctask\%5Csync_enrolments"
+# update tldr index
+0 10 * * 3 /usr/local/bin/tldr --update && echo $(date) "Updated TLDR index" >> ~/cron.log
+# purge directories that no longer exist from z cache
+0 9 * * 4  /usr/local/bin/fish -c "z --clean" && echo $(date) "purged deleted dirs from z index" >>~/cron.log
