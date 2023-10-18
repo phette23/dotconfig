@@ -278,6 +278,9 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 # When performing a search, search the current folder by default
 # defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
+# Delete files left in trash for 30 days
+defaults write com.apple.finder FXRemoveOldTrashItems -bool true
+
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
