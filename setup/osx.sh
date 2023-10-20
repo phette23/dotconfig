@@ -713,6 +713,9 @@ for app in "Address Book" \
 	killall "$app" > /dev/null 2>&1
 done
 
+# load tldr index
+[ ! -z $(command -v tldr) ] && tldr --update
+
 # https://github.com/MikeMcQuaid/dotfiles/blob/master/bin/touchid-enable-pam-sudo
 if [ -f /etc/pam.d/sudo ]; then
     echo "auth       sufficient     pam_tid.so" | pbcopy
