@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+set filename $argv[1]
+csvformat -T $filename | sed -e '1,2d' | pbc
+and trash $filename
+open "https://docs.google.com/spreadsheets/d/1wwSMJ4pxMbRYpjwnJXmrCnfLuMmSDF3CLQI44PszfsY/edit#gid=955338701"
