@@ -9,6 +9,9 @@ if [ -d $HDIR ] && [[ ":$PATH:" != *":$HDIR:"* ]]; then
     PATH="$HDIR${PATH:+":$PATH"}"
 fi
 
+# add my personal taproom
+brew tap phette23/local
+
 # Make sure we’re using the latest Homebrew
 brew update
 
@@ -37,6 +40,7 @@ brew install ack \
     gpm \
     grep \
     htop \
+    imagemagick \
     jc \
     jq \
     marcli \
