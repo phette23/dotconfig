@@ -18,6 +18,7 @@ bic firefox
 [ -d "/Applications/Google Chrome.app" ] || bic google-chrome
 bic imageoptim
 bic iterm2
+bic libreoffice # unoconv dependency
 bic slack
 bic spideroakone
 bic spotify
