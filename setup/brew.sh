@@ -52,14 +52,17 @@ brew install ack \
     node \
     pandoc \
     pipenv \
+    poetry \
     pyenv \
     sassc \
     skaffold \
     tealdeer \
     todo-txt \
     tree \
+    uchardet \
     vim \
     wget \
+    xmlstarlet \
     z
 
 brew tap homebrew/aliases && {
