@@ -34,6 +34,7 @@ brew install ack \
     fish \
     gh \
     git \
+    glab \
     glow \
     gnu-sed \
     gpg-suite-no-mail \
