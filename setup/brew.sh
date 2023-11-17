@@ -23,6 +23,7 @@ brew install ack \
     asdf \
     bash \
     bat \
+    cloc \
     coreutils \
     difftastic \
     duf \
@@ -54,6 +55,7 @@ brew install ack \
     pandoc \
     pipenv \
     poetry \
+    postgresql \
     pyenv \
     sassc \
     skaffold \
