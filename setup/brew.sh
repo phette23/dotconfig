@@ -33,6 +33,7 @@ brew install ack \
     fd \
     findutils \
     fish \
+    fzf \
     gh \
     git \
     glab \
@@ -66,7 +67,7 @@ brew install ack \
     vim \
     wget \
     xmlstarlet \
-    z
+    zoxide
 
 brew tap homebrew/aliases && {
     brew alias cmd=commands
