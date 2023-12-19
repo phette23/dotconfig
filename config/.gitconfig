@@ -86,6 +86,12 @@
 [diff "exif"]
     textconv = exiftool
 
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
 [help]
     autocorrect = 1
 
@@ -128,4 +134,4 @@
 [user]
     name = phette23
     email = phette23@gmail.com
-    signingkey = DC78D0C0DF787B67
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFMHTfiFzJlDDbhuRl1g4q/20moOLkudqSNJ/vyKiGZK
