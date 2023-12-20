@@ -10,7 +10,7 @@ The shell-agnostic pieces of my dotfiles, consisting of configuration files for 
 
 The "copy.sh" script syncs all the configuration files into your home directory.
 
-Crontab can be installed with `sudo crontab -u (whoami) -f crontab`.
+Crontab can be installed with `sudo crontab -u (whoami) -f (whoami).crontab`.
 
 ## Setup Notes/Order
 
