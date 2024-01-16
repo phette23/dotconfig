@@ -42,6 +42,7 @@ brew install ack \
     gpg-suite-no-mail \
     gpm \
     grep \
+    helm \
     htop \
     imagemagick \
     jc \
@@ -59,6 +60,7 @@ brew install ack \
     postgresql \
     pyenv \
     sassc \
+    shellcheck \
     skaffold \
     tealdeer \
     todo-txt \
