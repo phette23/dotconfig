@@ -24,6 +24,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Activate cron
 sudo mkdir /etc/cron
 
+hash defaults
+hash sudo
+
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
@@ -564,26 +567,26 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
+hash tmutil
+# this subcommand no longer exists
 # Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+# sudo tmutil disablelocal
 
 # Exclusions
 sudo tmutil addexclusion -p /Applications
-sudo tmutil addexclusion -p /usr/local/Caskroom
-sudo tmutil addexclusion -p /usr/local/Cellar
-sudo tmutil addexclusion -p /usr/local/Homebrew
-sudo tmutil addexclusion -p /usr/local/n
+sudo tmutil addexclusion -p /opt/homebrew
+sudo tmutil addexclusion -p /usr/local/n/versions
 sudo tmutil addexclusion -p ~/.bundle
-sudo tmutil addexclusion -p ~/.kube
-sudo tmutil addexclusion -p ~/.local
+sudo tmutil addexclusion -p ~/.local/share/virtualenvs
 sudo tmutil addexclusion -p ~/.minikube
 sudo tmutil addexclusion -p ~/.node
 sudo tmutil addexclusion -p ~/.npm
 sudo tmutil addexclusion -p ~/.pyenv
 sudo tmutil addexclusion -p ~/Applications
-sudo tmutil addexclusion -p ~/Creative\ Cloud\ Files
 sudo tmutil addexclusion -p ~/go
 sudo tmutil addexclusion -p ~/Google\ Drive
+sudo tmutil addexclusion -p "~/ephetteplace@cca.edu - Google Drive"
+sudo tmutil addexclusion -p "phette23@gmail.com - Google Drive"
 sudo tmutil addexclusion -p ~/Library/Caches
 sudo tmutil addexclusion -p ~/Library/Containers/com.docker.docker
 sudo tmutil addexclusion -p ~/Library/pnpm
