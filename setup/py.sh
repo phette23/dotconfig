@@ -4,11 +4,13 @@
 # it's a bad idea to use homebrew python for global packages because reguler `brew upgrade` cmds
 # will wipe out your existing python & break packages installed under it
 # https://justinmayer.com/posts/homebrew-python-is-not-for-you/
-pyenv install 3.11
-# need python 2 for old EQUELLA scripts
-pyenv install 2.7
-pyenv global 3.11 2.7
-pyenv init - | source
-python -m pip install --upgrade pip
-python -m pip install csvkit \
+asdf install python latest:3.11
+asdf install python latest:2.7
+# cannot set global python 2 & 3 versions like with pyenv
+asdf global python latest:3.11 latest:2.7
+asdf reshim python
+
+pip install --upgrade pip
+pip install \
+    csvkit \
     unoconv

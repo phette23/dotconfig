@@ -19,7 +19,8 @@ brew update
 # NOTE: we will uninstall node in npm.sh after using it to get N (my preferred
 # node version manager) and then using N to get node stable
 # gpm seems to be an unstated requirement for vim (via ruby)
-brew install ack \
+brew install \
+    ack \
     asdf \
     bash \
     bat \
@@ -58,7 +59,6 @@ brew install ack \
     pipenv \
     poetry \
     postgresql \
-    pyenv \
     sassc \
     shellcheck \
     skaffold \
@@ -75,6 +75,13 @@ brew tap homebrew/aliases && {
     brew alias cmd=commands
     brew alias i=install
 }
+
+# asdf plugins
+if [ command -v asdf >/dev/null ]; then
+    asdf plugin add nodejs
+    asdf plugin add python
+    asdf plugin add ruby
+fi
 
 # Add homebrew bash & fish to /etc/shells & use fish
 echo 'Ading homebrew bash and fish to /etc/shells, requires sudo'

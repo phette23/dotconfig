@@ -573,20 +573,19 @@ hash tmutil
 # sudo tmutil disablelocal
 
 # Exclusions
+sudo tmutil addexclusion -p "~/ephetteplace@cca.edu - Google Drive"
+sudo tmutil addexclusion -p "~/phette23@gmail.com - Google Drive"
 sudo tmutil addexclusion -p /Applications
 sudo tmutil addexclusion -p /opt/homebrew
-sudo tmutil addexclusion -p /usr/local/n/versions
+sudo tmutil addexclusion -p ~/.asdf
 sudo tmutil addexclusion -p ~/.bundle
 sudo tmutil addexclusion -p ~/.local/share/virtualenvs
 sudo tmutil addexclusion -p ~/.minikube
 sudo tmutil addexclusion -p ~/.node
 sudo tmutil addexclusion -p ~/.npm
-sudo tmutil addexclusion -p ~/.pyenv
 sudo tmutil addexclusion -p ~/Applications
 sudo tmutil addexclusion -p ~/go
 sudo tmutil addexclusion -p ~/Google\ Drive
-sudo tmutil addexclusion -p "~/ephetteplace@cca.edu - Google Drive"
-sudo tmutil addexclusion -p "phette23@gmail.com - Google Drive"
 sudo tmutil addexclusion -p ~/Library/Caches
 sudo tmutil addexclusion -p ~/Library/Containers/com.docker.docker
 sudo tmutil addexclusion -p ~/Library/pnpm
