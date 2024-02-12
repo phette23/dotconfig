@@ -56,8 +56,7 @@ brew install \
     neofetch \
     node \
     pandoc \
-    pipenv \
-    poetry \
+    pipx \
     postgresql \
     sassc \
     shellcheck \
