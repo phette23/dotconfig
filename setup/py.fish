@@ -13,10 +13,14 @@ if command --query pipx
     fish_add_path ~/.local/bin
     # invenio-cli?
     pipx install \
-        csvkit
+        csvkit \
         pipenv \
         poetry \
         unoconv
+
+    if command --query register-python-argcomplete
+        register-python-argcomplete --shell fish pipx > ~/.config/fish/completions/pipx.fish
+    end
 end
 
 pip install --upgrade pip
