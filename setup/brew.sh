@@ -58,6 +58,7 @@ brew install \
     pandoc \
     pipx \
     postgresql \
+    rsync \
     sassc \
     shellcheck \
     skaffold \
