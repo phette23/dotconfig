@@ -99,6 +99,8 @@
     defaultBranch = main
 
 [merge]
+    # force fast-forward merges, don't create a merge commit
+    ff = only
     # Include summaries of merged commits in newly created merge commit messages
     log = true
     # use VS Code for merge commits
