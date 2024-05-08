@@ -567,29 +567,29 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-hash tmutil
-# this subcommand no longer exists
-# Disable local Time Machine backups
-# sudo tmutil disablelocal
+hash tmutil # speeds up execution
 
-# Exclusions
-sudo tmutil addexclusion -p "~/ephetteplace@cca.edu - Google Drive"
-sudo tmutil addexclusion -p "~/phette23@gmail.com - Google Drive"
-sudo tmutil addexclusion -p /Applications
-sudo tmutil addexclusion -p /opt/homebrew
-sudo tmutil addexclusion -p ~/.asdf
-sudo tmutil addexclusion -p ~/.bundle
-sudo tmutil addexclusion -p ~/.local/share/virtualenvs
-sudo tmutil addexclusion -p ~/.minikube
-sudo tmutil addexclusion -p ~/.node
-sudo tmutil addexclusion -p ~/.npm
-sudo tmutil addexclusion -p ~/Applications
-sudo tmutil addexclusion -p ~/go
-sudo tmutil addexclusion -p ~/Google\ Drive
-sudo tmutil addexclusion -p ~/Library/Caches
-sudo tmutil addexclusion -p ~/Library/Containers/com.docker.docker
-sudo tmutil addexclusion -p ~/Library/pnpm
-sudo tmutil addexclusion -p ~/perl5
+# Time Machine backup exclusions
+for p in \
+    /Applications \
+    /opt/homebrew \
+    $HOME/.asdf \
+    $HOME/.bundle \
+    $HOME/.local/share/mise \
+    $HOME/.local/share/virtualenvs \
+    $HOME/.minikube \
+    $HOME/.node \
+    $HOME/.npm \
+    $HOME/Applications \
+    $HOME/go \
+    $HOME/Google\ Drive \
+    "$HOME/ephetteplace@cca.edu - Google Drive" \
+    "$HOME/phette23@gmail.com - Google Drive" \
+    $HOME/Library/Caches \
+    $HOME/Library/Containers/com.docker.docker \
+    $HOME/Library/pnpm; do
+    sudo tmutil addexclusion -p "${p}"
+done
 
 ###############################################################################
 # Activity Monitor                                                            #
