@@ -1,4 +1,5 @@
-#!/usr/bin/env bash -x
+#!/usr/bin/env bash
+set -x
 
 # based on http://mths.be/osx
 # also adopts portions of cowboy/dotfiles/init/10_osx.sh
@@ -700,6 +701,8 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 # Kill affected applications                                                  #
 ###############################################################################
 
+hash killall
+
 for app in "Address Book" \
     "Calendar" \
     "Contacts" \
@@ -716,13 +719,13 @@ for app in "Address Book" \
 done
 
 # load tldr index
-[ ! -z $(command -v tldr) ] && tldr --update
+[ -n "$(command -v tldr)" ] && tldr --update
 
 # https://github.com/MikeMcQuaid/dotfiles/blob/master/bin/touchid-enable-pam-sudo
 if [ -f /etc/pam.d/sudo ]; then
     echo "auth       sufficient     pam_tid.so" | pbcopy
     echo -n "Want to enable touch ID for sudo by adding the line 'auth       sufficient     pam_tid.so' to the /etc/pam.d/sudo configuration file? The config text has been copied to your keyboard, so you can paste it in the editor that will open. (y/n) "
-    read response
+    read -r response
     if [ "$response" = "y" ]; then
         sudo vim /etc/pam.d/sudo
     fi
