@@ -586,6 +586,7 @@ for p in \
     $HOME/Google\ Drive \
     "$HOME/ephetteplace@cca.edu - Google Drive" \
     "$HOME/phette23@gmail.com - Google Drive" \
+    "$HOME/Library/Application Support/com.wizards.mtga" \
     $HOME/Library/Caches \
     $HOME/Library/Containers/com.docker.docker \
     $HOME/Library/pnpm; do
