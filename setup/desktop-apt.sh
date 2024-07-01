@@ -1,4 +1,5 @@
-#!/usr/bin/env bash -x
+#!/usr/bin/env bash
+set -x
 # Software for a fresh Ubuntu Desktop install
 
 sudo apt-get update
@@ -19,4 +20,3 @@ sudo apt-get -y install \
 	tor \
 	vidalia \
 	xclip
-

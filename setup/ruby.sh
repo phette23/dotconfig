@@ -1,5 +1,5 @@
-#! /usr/bin/env bash -x
-
+#!/usr/bin/env bash
+set -x
 asdf install ruby 3.0.6 || { echo "must install asdf before running ruby.sh" 1>&2 && exit 1; }
 
 gem install \
