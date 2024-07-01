@@ -574,7 +574,6 @@ hash tmutil # speeds up execution
 for p in \
     /Applications \
     /opt/homebrew \
-    $HOME/.asdf \
     $HOME/.bundle \
     $HOME/.local/share/mise \
     $HOME/.local/share/virtualenvs \

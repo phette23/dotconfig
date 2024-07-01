@@ -16,13 +16,9 @@ brew tap phette23/local
 # Make sure we’re using the latest Homebrew
 brew update
 
-# Install other useful packages
-# NOTE: we will uninstall node in npm.sh after using it to get N (my preferred
-# node version manager) and then using N to get node stable
-# gpm seems to be an unstated requirement for vim (via ruby)
+# NOTE: we install programming language versions via `mise` & not brew
 brew install \
     ack \
-    asdf \
     bash \
     bat \
     cloc \
@@ -42,7 +38,6 @@ brew install \
     glow \
     gnu-sed \
     gpg-suite-no-mail \
-    gpm \
     grep \
     helm \
     htop \
@@ -53,9 +48,9 @@ brew install \
     miller \
     minikube \
     moreutils \
+    mise \
     ncdu \
     neofetch \
-    node \
     pandoc \
     pipx \
     postgresql \
@@ -76,13 +71,6 @@ brew tap homebrew/aliases && {
     brew alias cmd=commands
     brew alias i=install
 }
-
-# asdf plugins
-if [ -n "$(command -v asdf)" ]; then
-    asdf plugin add nodejs
-    asdf plugin add python
-    asdf plugin add ruby
-fi
 
 # Add homebrew bash & fish to /etc/shells & use fish
 echo 'Ading homebrew bash and fish to /etc/shells, requires sudo'
