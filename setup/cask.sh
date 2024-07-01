@@ -1,5 +1,6 @@
-#!/usr/bin/env bash -x
-if [ ! $(command -v brew) ]; then
+#!/usr/bin/env bash
+set -x
+if [ ! "$(command -v brew)" ]; then
   echo 'You need to install homebrew first, silly!'
   open "http://brew.sh"
   exit 1
@@ -7,7 +8,7 @@ fi
 
 brew tap homebrew/cask-versions
 
-bic () { brew install --cask $1; }
+bic () { brew install --cask "$1"; }
 
 [ -d /Applications/1Password.app ] || bic 1password
 bic 1password/tap/1password-cli

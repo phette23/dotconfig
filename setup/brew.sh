@@ -1,4 +1,5 @@
-#!/usr/bin/env bash -x
+#!/usr/bin/env bash
+set -x
 if [ ! "$(command -v brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
@@ -77,7 +78,7 @@ brew tap homebrew/aliases && {
 }
 
 # asdf plugins
-if [ command -v asdf >/dev/null ]; then
+if [ -n "$(command -v asdf)" ]; then
     asdf plugin add nodejs
     asdf plugin add python
     asdf plugin add ruby
