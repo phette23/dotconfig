@@ -1,11 +1,10 @@
 #!/usr/bin/env fish
-# Use fish shell so we can modify its PATH with `fish_add_path` & not need to edit config.fish
-# like the `pipx ensurepath` command does. We get mise and pipx from homebrew, install python
-# versions with mise, then use pipx to install global python packages.
-# https://justinmayer.com/posts/homebrew-python-is-not-for-you/
+# Use fish shell so we can modify its PATH with `fish_add_path` & without editing config.fish.
+# We get mise & uv from homebrew, install python versions with mise, then use uv to install
+# global python tools. https://justinmayer.com/posts/homebrew-python-is-not-for-you/
 if command --query mise
-    mise install python@3.12
     mise install python@2.7
+    mise install python@3.12
     mise global python@3.12 python@2.7
     mise reshim python
 else
@@ -13,19 +12,14 @@ else
     exit 1
 end
 
-if command --query pipx
+if command --query uv
     fish_add_path ~/.local/bin
-    # invenio-cli?
-    pipx install \
-        argcomplete \
+    uv tool install \
         csvkit \
+        invenio-cli \
         pipenv \
         poetry \
         unoconv
-
-    if command --query register-python-argcomplete
-        register-python-argcomplete --shell fish pipx >~/.config/fish/completions/pipx.fish
-    end
 end
 
 pip install --upgrade pip
