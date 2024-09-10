@@ -52,7 +52,6 @@ brew install \
     ncdu \
     neofetch \
     pandoc \
-    pipx \
     postgresql \
     rsync \
     sassc \
@@ -62,6 +61,7 @@ brew install \
     todo-txt \
     tree \
     uchardet \
+    uv \
     vim \
     wget \
     xmlstarlet \
