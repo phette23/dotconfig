@@ -722,12 +722,12 @@ done
 [ -n "$(command -v tldr)" ] && tldr --update
 
 # https://github.com/MikeMcQuaid/dotfiles/blob/master/bin/touchid-enable-pam-sudo
-if [ -f /etc/pam.d/sudo ]; then
-    echo "auth       sufficient     pam_tid.so" | pbcopy
-    echo -n "Want to enable touch ID for sudo by adding the line 'auth       sufficient     pam_tid.so' to the /etc/pam.d/sudo configuration file? The config text has been copied to your keyboard, so you can paste it in the editor that will open. (y/n) "
+if [ -f /etc/pam.d/sudo_local.template ] && [ ! -f /etc/pam.d/sudo_local ]; then
+    echo -n "Want to enable touch ID for sudo by uncommenting the line 'auth       sufficient     pam_tid.so' in the /etc/pam.d/sudo_local configuration file?"
     read -r response
     if [ "$response" = "y" ]; then
-        sudo vim /etc/pam.d/sudo
+        cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local
+        sudo sed -i '' '/pam_tid\.so/s/^#//' /etc/pam.d/sudo_local
     fi
 fi
 
