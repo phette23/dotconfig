@@ -21,7 +21,6 @@ bic imageoptim
 bic iterm2
 bic libreoffice # unoconv dependency
 bic slack
-bic spideroakone
 bic spotify
 bic tor-browser
 bic visual-studio-code
