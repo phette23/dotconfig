@@ -18,7 +18,6 @@ brew update
 
 # NOTE: we install programming language versions via `mise` & not brew
 brew install \
-    ack \
     bash \
     bat \
     cloc \
@@ -50,7 +49,6 @@ brew install \
     moreutils \
     mise \
     ncdu \
-    neofetch \
     pandoc \
     postgresql \
     rsync \
