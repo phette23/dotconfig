@@ -22,6 +22,7 @@ brew install \
     bat \
     cloc \
     coreutils \
+    curl \
     difftastic \
     duf \
     dust \
