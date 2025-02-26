@@ -36,8 +36,6 @@
     # Squash last commit into one before it
     sq = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B -n ${1})\"; };f"
     t = tag
-    # Show verbose output about tags, branches or remotes
-    tags = tag -l
     # remove from staging
     unstage = restore --staged
 
