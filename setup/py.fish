@@ -20,6 +20,6 @@ if command --query uv
         pipenv \
         poetry \
         unoconv
+    # bagit relies on deprecated pkg_resources which is in setuptools
+    uv tool install bagit --with setuptools
 end
-
-pip install --upgrade pip
