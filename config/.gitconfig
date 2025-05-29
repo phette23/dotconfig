@@ -3,6 +3,8 @@
     alias = "!git config -l | grep alias | cut -c 7-"
     br = branch -avv
     brd = branch -D
+    # delete branch locally & on the "origin" remote
+    brdr = "!f() { git branch -D \"$1\" && git push origin --delete \"$1\"; }; f"
     # Simpler commit, add
     c = commit -S -m
     # Commit all changes
