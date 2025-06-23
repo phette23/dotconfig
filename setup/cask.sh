@@ -13,7 +13,7 @@ bic () { brew install --cask "$1"; }
 [ -d /Applications/1Password.app ] || bic 1password
 bic 1password/tap/1password-cli
 bic alfred
-bic docker
+bic docker-desktop
 bic discord
 bic firefox
 [ -d "/Applications/Google Chrome.app" ] || bic google-chrome
