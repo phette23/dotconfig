@@ -17,7 +17,6 @@ if command --query uv
     uv tool install \
         csvkit \
         invenio-cli \
-        pipenv \
         poetry \
         unoconv
     # bagit relies on deprecated pkg_resources which is in setuptools
