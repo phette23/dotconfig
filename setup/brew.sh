@@ -53,6 +53,7 @@ brew install \
     pandoc \
     postgresql \
     rsync \
+    ruff \
     sassc \
     shellcheck \
     skaffold \
