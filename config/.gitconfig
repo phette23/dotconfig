@@ -35,6 +35,8 @@
     rem = remote -v
     # View the current working tree status using the short format
     s = status -sb
+    # Sign off on patches (e.g. for Koha)
+    so = "!f() { git rebase --interactive --exec 'git commit --amend --signoff --no-edit' HEAD~$1; }; f"
     stat = status --show-stash
     # Squash last commit into one before it
     sq = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B -n ${1})\"; };f"
