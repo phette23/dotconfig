@@ -3,8 +3,7 @@ PATH=/usr/bin:/bin:/usr/local/bin:/opt/homebrew/bin:/Users/ephetteplace/bin:/Use
 0 9 * * 2 say "Check the enrollment logs" && open "https://moodle.cca.edu/admin/tasklogs.php?filter=enrol_database\%5Ctask\%5Csync_enrolments"
 # update tldr index
 0 10 * * 3 tldr --update && echo $(date) "Updated TLDR index" >> /Users/ephetteplace/cron.log
-# prune unused packakges from pnpm store monthly
-0 12 1 * * pnpm store prune && echo $(date) "pruned PNPM store" >> /Users/ephetteplace/cron.log
+# prune unused packakges from pnpm store & uv cache monthly
+0 12 1 * * pnpm store prune && echo $(date) "pruned PNPM store" >> /Users/ephetteplace/cron.log; uv cache prune >> /Users/ephetteplace/cron.log
 # run website instagram script
 00 10 * * 1,2,3,4,5 instagram_cron.fish
-
