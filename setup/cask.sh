@@ -19,7 +19,6 @@ bic firefox
 bic imageoptim
 bic iterm2
 bic slack
-bic spotify
 bic tor-browser
 bic visual-studio-code
 bic xquartz
