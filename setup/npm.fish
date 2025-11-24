@@ -15,3 +15,6 @@ pnpm setup
 pnpm install -g \
     fx \
     trash-cli
+npm config set --global fund false
+pnpm config set --global fund false
+pnpm config set --global minimumReleaseAge (math 60 x 24 x 7)
