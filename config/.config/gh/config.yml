@@ -11,5 +11,6 @@ aliases:
     assignme: issue edit --add-assignee @me
     co: pr checkout
     ils: issue list
+    prm: pr merge --delete-branch --rebase
     prs: pr list
     vw: repo view --web
