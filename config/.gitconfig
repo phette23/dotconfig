@@ -116,7 +116,7 @@
     rebase = true
 
 [push]
-    default = matching
+    default = upstream
     # push annotated tags, too
     followTags = true
 
