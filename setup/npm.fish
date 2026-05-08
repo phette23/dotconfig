@@ -7,12 +7,7 @@ else
     exit 1
 end
 
-# get pnpm and switch to using it for global deps
-if command --query corepack
-    corepack enable pnpm
-else
-    npm i -g pnpm@latest
-end
+npm i -g pnpm@latest
 set -Ux PNPM_HOME "$HOME/Library/pnpm"
 fish_add_path "$PNPM_HOME"
 pnpm setup
