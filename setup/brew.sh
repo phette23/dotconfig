@@ -31,7 +31,6 @@ brew install \
     fd \
     findutils \
     fish \
-    fzf \
     gh \
     git \
     glab \
@@ -50,11 +49,8 @@ brew install \
     moreutils \
     mise \
     ncdu \
-    pandoc \
     postgresql \
     rsync \
-    ruff \
-    sassc \
     shellcheck \
     skaffold \
     tealdeer \
