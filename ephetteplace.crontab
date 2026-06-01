@@ -4,6 +4,6 @@ PATH=/usr/bin:/bin:/usr/local/bin:/opt/homebrew/bin:/Users/ephetteplace/bin:/Use
 # update tldr index
 0 10 * * 3 tldr --update && echo $(date) "Updated TLDR index" >> $HOME/cron.log 2>&1
 # prune unused packakges from pnpm store & uv cache monthly
-0 12 1 * * echo $(date) "pruning pnpm store and uv cache" >> $HOME/cron.log; pnpm store prune >> $HOME/cron.log 2>&1; uv cache prune >> $HOME/cron.log 2>&1
+0 12 1 * * echo $(date) "pruning pnpm store and uv cache" >> $HOME/cron.log; mise exec node@24 -- pnpm store prune >> $HOME/cron.log 2>&1; uv cache prune >> $HOME/cron.log 2>&1
 # run website instagram script
 00 10 * * 1,2,3,4,5 instagram_cron.fish
