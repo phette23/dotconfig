@@ -11,6 +11,6 @@ aliases:
     assignme: issue edit --add-assignee @me
     co: pr checkout
     ils: issue list
-    prm: '!gh pr merge --rebase --delete-branch "$1" && git pull'
+    prm: '!gh pr merge --rebase --delete-branch "$1" && git pull && git remote prune origin'
     prs: pr list
     vw: repo view --web
