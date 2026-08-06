@@ -1,0 +1,9 @@
+# Disabled rules
+# Line length
+MD013: false
+# New line before code blocks
+MD031: false
+# New line before list
+MD032: false
+# Bare URLs
+MD034: false
