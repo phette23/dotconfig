@@ -12,11 +12,12 @@ fi
 
 # add my personal taproom
 brew tap phette23/local
+brew trust phette23/local
 
 # Make sure we’re using the latest Homebrew
 brew update
 
-# NOTE: we install programming language versions via `mise` & not brew
+# ! We install programming language versions via `mise` & not brew
 brew install \
     bash \
     bat \
@@ -38,21 +39,17 @@ brew install \
     gnu-sed \
     gpg-suite-no-mail \
     grep \
-    helm \
     htop \
     imagemagick \
-    jc \
     jq \
     marcli \
     miller \
-    minikube \
     moreutils \
     mise \
     ncdu \
     postgresql \
     rsync \
     shellcheck \
-    skaffold \
     tealdeer \
     todo-txt \
     tree \
@@ -63,10 +60,7 @@ brew install \
     xmlstarlet \
     zoxide
 
-brew tap homebrew/aliases && {
-    brew alias cmd=commands
-    brew alias i=install
-}
+brew alias i=install
 
 # Add homebrew bash & fish to /etc/shells & use fish
 echo 'Ading homebrew bash and fish to /etc/shells, requires sudo'

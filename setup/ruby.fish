@@ -7,5 +7,5 @@ else
     exit 1
 end
 
-gem install \
-    bundler
+mise use ruby@latest
+gem install bundler

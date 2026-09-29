@@ -723,12 +723,8 @@ done
 
 # https://github.com/MikeMcQuaid/dotfiles/blob/master/bin/touchid-enable-pam-sudo
 if [ -f /etc/pam.d/sudo_local.template ] && [ ! -f /etc/pam.d/sudo_local ]; then
-    echo -n "Want to enable touch ID for sudo by uncommenting the line 'auth       sufficient     pam_tid.so' in the /etc/pam.d/sudo_local configuration file?"
-    read -r response
-    if [ "$response" = "y" ]; then
-        cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local
-        sudo sed -i '' '/pam_tid\.so/s/^#//' /etc/pam.d/sudo_local
-    fi
+    sudo cp /etc/pam.d/sudo_local.template /etc/pam.d/sudo_local
+    sudo sed -i '' '/pam_tid\.so/s/^#//' /etc/pam.d/sudo_local
 fi
 
 echo "Done! Some changes require a logout/restart to take effect."

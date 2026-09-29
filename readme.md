@@ -24,3 +24,5 @@ Crontab can be installed with `sudo crontab -u (whoami) -f (whoami).crontab`.
 1. `./setup/py.sh`
 1. `./setup/ruby.sh`
 1. `./setup/osx.sh` makes sense to run last, but mostly important to do after `brew cask` has installed apps like Chrome that will have their settings changed
+
+You may also want to run `./setup/ssh.sh` to set up your SSH configuration and import your GPG key.

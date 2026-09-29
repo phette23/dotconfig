@@ -5,6 +5,7 @@ read -P "Hit return when you've done this (or Crtl+C to cancel"
 fish_add_path ~/bin/google-cloud-sdk/bin
 gcloud auth login
 
+# ! These are all old CCA configs
 function mk_config
     # mk_config $NAME $GCP_PROJECT
     gcloud config configurations create $argv[1]
