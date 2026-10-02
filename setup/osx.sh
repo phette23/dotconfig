@@ -323,6 +323,24 @@ configure_finder_icon_views() (
 )
 configure_finder_icon_views
 
+# Create Code and add it plus existing Google Drive folders to the sidebar.
+# Finder UI scripting needs Accessibility access for the terminal running this
+# script (System Settings > Privacy & Security > Accessibility).
+configure_finder_sidebar() {
+    local script_dir folder
+    local sidebar_folders=("$HOME/Code")
+    mkdir -p "$HOME/Code" || return 1
+    script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || return 1
+    for folder in "$HOME"/*Google*Drive* "$HOME/Library/CloudStorage"/*Google*Drive*; do
+        [[ -d $folder ]] || continue
+        sidebar_folders+=("$folder")
+    done
+    osascript "$script_dir/finder-sidebar.applescript" "${sidebar_folders[@]}"
+}
+if ! configure_finder_sidebar; then
+    echo "Finder sidebar setup failed; check the error above and your terminal's Accessibility/Automation permissions." >&2
+fi
+
 # Use column view in all Finder windows by default
 # Four-letter codes for the other view modes: `Nlsv`, `icnv`, `clmv`, `glyv` (Gallery; `Flwv` was Cover Flow)
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
