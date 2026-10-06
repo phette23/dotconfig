@@ -9,9 +9,10 @@ else
 end
 
 npm i -g npm
-npm i -g pnpm@latest
 set -Ux PNPM_HOME "$HOME/Library/pnpm"
 fish_add_path "$PNPM_HOME"
+# install pnpm outside of the mise npm environment
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 pnpm setup
 pnpm add -g fx
 npm config set --global fund false
