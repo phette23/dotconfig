@@ -202,6 +202,9 @@ fi
 # Screen                                                                      #
 ###############################################################################
 
+# Turn off "displays have separate spaces" which forces app switcher to stay on laptop display & not external monitors
+defaults write com.apple.spaces spans-displays -bool true
+
 # Require password immediately after sleep or screen saver begins
 # Legacy preferences: verify System Settings > Lock Screen on modern macOS;
 # successful defaults writes alone do not prove the password policy changed.
