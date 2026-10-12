@@ -48,6 +48,7 @@ brew install \
     mise \
     ncdu \
     postgresql \
+    ripgrep \
     rsync \
     shellcheck \
     tealdeer \
