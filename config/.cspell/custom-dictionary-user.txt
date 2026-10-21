@@ -2,6 +2,7 @@ archivesspace
 Audre
 commenters
 domcontentloaded
+dotconfig
 fastexcel
 frontmatter
 JDSS
@@ -12,5 +13,6 @@ MPLP
 OAIS
 osascript
 phette23
+Phetteplace
 pytest
 SCELC
