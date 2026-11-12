@@ -29,12 +29,12 @@ brew install \
     dust \
     exiftool \
     eza \
+    fastfetch \
     fd \
     findutils \
     fish \
     gh \
     git \
-    glab \
     glow \
     gnu-sed \
     gpg-suite-no-mail \
